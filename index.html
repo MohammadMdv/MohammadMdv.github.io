@@ -1,0 +1,702 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mohammad Mahdavi | AI Engineer & ML Researcher</title>
+  <meta name="description" content="Mohammad Mahdavi: Senior AI Engineer & Vision Lead at DuoAnalytics and ML researcher working on trustworthy and robust machine learning, adversarial robustness and backdoors in speech and vision models." />
+  <meta name="author" content="Mohammad Mahdavi" />
+  <meta property="og:title" content="Mohammad Mahdavi | AI Engineer & ML Researcher" />
+  <meta property="og:description" content="Trustworthy & robust ML, computer vision, retrieval and multimodal LLMs. NeurIPS 2026 · TMLR 2026." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://b2dev.me/" />
+  <meta name="theme-color" content="#0b0f17" />
+  <link rel="canonical" href="https://b2dev.me/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%23a78bfa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='%230b0f17'%3EMM%3C/text%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script>
+    // Apply the saved theme before first paint to avoid a flash.
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+  <style>
+    :root {
+      --bg: #0b0f17;
+      --bg-soft: #111827;
+      --card: rgba(255, 255, 255, 0.035);
+      --card-hover: rgba(255, 255, 255, 0.06);
+      --border: rgba(255, 255, 255, 0.08);
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --faint: #6b7280;
+      --accent: #22d3ee;
+      --accent-2: #a78bfa;
+      --grad: linear-gradient(135deg, var(--accent), var(--accent-2));
+      --glow-1: rgba(34, 211, 238, 0.16);
+      --glow-2: rgba(167, 139, 250, 0.16);
+      --shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
+      --radius: 16px;
+      --maxw: 1080px;
+    }
+    @media (prefers-color-scheme: light) {
+      :root:not([data-theme="dark"]) {
+        --bg: #f8fafc;
+        --bg-soft: #eef2f7;
+        --card: rgba(255, 255, 255, 0.8);
+        --card-hover: #ffffff;
+        --border: rgba(15, 23, 42, 0.09);
+        --text: #0f172a;
+        --muted: #475569;
+        --faint: #64748b;
+        --accent: #0891b2;
+        --accent-2: #7c3aed;
+        --glow-1: rgba(8, 145, 178, 0.12);
+        --glow-2: rgba(124, 58, 237, 0.12);
+        --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      }
+    }
+    :root[data-theme="light"] {
+      --bg: #f8fafc;
+      --bg-soft: #eef2f7;
+      --card: rgba(255, 255, 255, 0.8);
+      --card-hover: #ffffff;
+      --border: rgba(15, 23, 42, 0.09);
+      --text: #0f172a;
+      --muted: #475569;
+      --faint: #64748b;
+      --accent: #0891b2;
+      --accent-2: #7c3aed;
+      --glow-1: rgba(8, 145, 178, 0.12);
+      --glow-2: rgba(124, 58, 237, 0.12);
+      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(600px circle at 10% 0%, var(--glow-1), transparent 60%),
+        radial-gradient(700px circle at 95% 20%, var(--glow-2), transparent 60%);
+      pointer-events: none;
+    }
+    a { color: inherit; text-decoration: none; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
+    .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
+    .grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+
+    /* Nav */
+    header.nav {
+      position: sticky; top: 0; z-index: 50;
+      backdrop-filter: saturate(160%) blur(14px);
+      -webkit-backdrop-filter: saturate(160%) blur(14px);
+      background: color-mix(in srgb, var(--bg) 72%, transparent);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-weight: 800; letter-spacing: -0.02em; font-size: 1.05rem; display: flex; align-items: center; gap: 10px; }
+    .logo-mark { width: 30px; height: 30px; border-radius: 9px; background: var(--grad); display: grid; place-items: center; color: #0b0f17; font-size: 0.78rem; font-weight: 800; }
+    .nav-links { display: flex; gap: 4px; align-items: center; }
+    .nav-links a { color: var(--muted); font-size: 0.92rem; font-weight: 500; padding: 8px 12px; border-radius: 10px; transition: color .2s, background .2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); background: var(--card-hover); }
+    .icon-btn { background: var(--card); border: 1px solid var(--border); color: var(--text); width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; cursor: pointer; transition: background .2s; }
+    .icon-btn:hover { background: var(--card-hover); }
+    .icon-btn svg { width: 18px; height: 18px; }
+    .menu-btn { display: none; }
+    .nav-actions { display: flex; gap: 8px; align-items: center; margin-left: 8px; }
+
+    /* Hero */
+    .hero { padding: 96px 0 72px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--muted); border: 1px solid var(--border); background: var(--card); padding: 6px 12px; border-radius: 999px; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 4px rgba(34, 197, 94, .18); }
+    .hero h1 { font-size: clamp(2.6rem, 6.5vw, 4.6rem); line-height: 1.05; letter-spacing: -0.035em; margin: 22px 0 14px; font-weight: 800; }
+    .hero .role { font-size: clamp(1.1rem, 2.4vw, 1.4rem); color: var(--muted); margin: 0 0 10px; font-weight: 500; }
+    .rotator { font-size: clamp(1rem, 2vw, 1.15rem); color: var(--accent); min-height: 1.8em; margin-bottom: 30px; }
+    .rotator .caret { display: inline-block; width: 9px; height: 1.1em; background: var(--accent); vertical-align: -0.18em; margin-left: 3px; animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    .hero p.lead { max-width: 680px; color: var(--muted); font-size: 1.08rem; margin: 0 0 34px; }
+    .hero p.lead strong { color: var(--text); font-weight: 600; }
+    .cta { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; gap: 9px; padding: 12px 18px; border-radius: 12px; font-weight: 600; font-size: 0.95rem; border: 1px solid var(--border); background: var(--card); transition: transform .2s, background .2s, border-color .2s; }
+    .btn:hover { transform: translateY(-2px); background: var(--card-hover); border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); }
+    .btn.primary { background: var(--grad); color: #0b0f17; border: none; }
+    .btn.primary:hover { filter: brightness(1.08); }
+    .btn svg { width: 18px; height: 18px; flex: none; }
+
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 64px; }
+    .stat { border: 1px solid var(--border); background: var(--card); border-radius: var(--radius); padding: 20px; }
+    .stat b { display: block; font-size: 1.55rem; letter-spacing: -0.02em; }
+    .stat span { color: var(--muted); font-size: 0.88rem; }
+
+    /* Sections */
+    section { padding: 72px 0; }
+    .section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 34px; }
+    .section-head .num { color: var(--accent); font-size: 0.9rem; }
+    .section-head h2 { font-size: clamp(1.6rem, 3.4vw, 2.1rem); letter-spacing: -0.025em; margin: 0; font-weight: 750; }
+    .section-head .line { flex: 1; height: 1px; background: var(--border); }
+
+    .card { border: 1px solid var(--border); background: var(--card); border-radius: var(--radius); padding: 24px; transition: transform .25s, background .25s, border-color .25s, box-shadow .25s; }
+    .card:hover { transform: translateY(-3px); background: var(--card-hover); border-color: color-mix(in srgb, var(--accent) 30%, var(--border)); box-shadow: var(--shadow); }
+
+    /* About */
+    .about-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 24px; }
+    .about-grid p { color: var(--muted); margin: 0 0 16px; }
+    .about-grid p strong { color: var(--text); font-weight: 600; }
+    .facts { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+    .facts li { display: flex; gap: 12px; align-items: flex-start; color: var(--muted); font-size: 0.95rem; }
+    .facts li b { color: var(--text); font-weight: 600; }
+    .facts .ic { flex: none; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--accent); }
+    .facts .ic svg { width: 17px; height: 17px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
+    .tag { font-size: 0.82rem; color: var(--text); border: 1px solid var(--border); background: var(--card); padding: 6px 12px; border-radius: 999px; }
+
+    /* Publications */
+    .pubs { display: grid; gap: 16px; }
+    .pub { display: grid; grid-template-columns: 130px 1fr; gap: 22px; align-items: start; }
+    .venue { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 2px; }
+    .venue .badge { font-size: 0.78rem; font-weight: 700; padding: 5px 10px; border-radius: 8px; letter-spacing: 0.02em; }
+    .venue small { color: var(--faint); font-size: 0.78rem; padding-left: 2px; }
+    .b-neurips { background: rgba(167, 139, 250, .16); color: var(--accent-2); }
+    .b-tmlr { background: rgba(34, 211, 238, .14); color: var(--accent); }
+    .b-review { background: rgba(251, 146, 60, .15); color: #f59e0b; }
+    .b-pre { background: rgba(148, 163, 184, .15); color: var(--muted); }
+    .pub h3 { margin: 0 0 8px; font-size: 1.08rem; line-height: 1.4; letter-spacing: -0.01em; }
+    .pub h3 a:hover { color: var(--accent); }
+    .pub p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+    .pub .meta { margin-top: 10px; font-size: 0.82rem; color: var(--faint); }
+    .hl { color: var(--text); font-weight: 600; }
+
+    /* Experience timeline */
+    .timeline { position: relative; padding-left: 28px; }
+    .timeline::before { content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(var(--accent), var(--accent-2), transparent); border-radius: 2px; }
+    .job { position: relative; margin-bottom: 18px; }
+    .job::before { content: ""; position: absolute; left: -27px; top: 30px; width: 14px; height: 14px; border-radius: 50%; background: var(--bg); border: 3px solid var(--accent); }
+    .job.current::before { background: var(--accent); box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 20%, transparent); }
+    .job-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; }
+    .job h3 { margin: 0; font-size: 1.08rem; letter-spacing: -0.01em; }
+    .job .org { color: var(--accent); font-weight: 600; font-size: 0.95rem; }
+    .job .when { color: var(--faint); font-size: 0.85rem; white-space: nowrap; }
+    .job .where { color: var(--faint); font-size: 0.85rem; }
+    .job ul { margin: 12px 0 0; padding-left: 18px; color: var(--muted); font-size: 0.95rem; }
+    .job li { margin-bottom: 6px; }
+    .job li::marker { color: var(--accent); }
+
+    /* Projects */
+    .projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+    .project { display: flex; flex-direction: column; }
+    .project-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
+    .project .emoji { font-size: 1.6rem; }
+    .project .ext { color: var(--faint); transition: color .2s, transform .2s; }
+    .project:hover .ext { color: var(--accent); transform: translate(2px, -2px); }
+    .project .ext svg { width: 18px; height: 18px; }
+    .project h3 { margin: 0 0 8px; font-size: 1.05rem; letter-spacing: -0.01em; }
+    .project p { margin: 0 0 16px; color: var(--muted); font-size: 0.92rem; flex: 1; }
+    .stack { display: flex; flex-wrap: wrap; gap: 6px; }
+    .stack span { font-size: 0.75rem; color: var(--muted); background: var(--bg-soft); border: 1px solid var(--border); padding: 3px 9px; border-radius: 6px; }
+
+    /* Skills */
+    .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .skill-group h3 { margin: 0 0 14px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 600; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { font-size: 0.88rem; padding: 7px 12px; border-radius: 10px; background: var(--bg-soft); border: 1px solid var(--border); }
+
+    /* Education */
+    .edu { display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: start; }
+    .edu-ic { width: 56px; height: 56px; border-radius: 14px; background: var(--grad); display: grid; place-items: center; color: #0b0f17; }
+    .edu-ic svg { width: 28px; height: 28px; }
+    .edu h3 { margin: 0; font-size: 1.15rem; }
+    .edu .sub { color: var(--muted); margin: 2px 0 14px; }
+    .edu ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 0.95rem; }
+    .edu li { margin-bottom: 6px; }
+    .edu li::marker { color: var(--accent); }
+
+    /* Contact */
+    .contact { text-align: center; padding: 56px 28px; position: relative; overflow: hidden; }
+    .contact h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: -0.03em; margin: 0 0 12px; }
+    .contact p { color: var(--muted); max-width: 560px; margin: 0 auto 28px; }
+    .contact .cta { justify-content: center; }
+
+    footer { padding: 36px 0 48px; color: var(--faint); font-size: 0.85rem; text-align: center; }
+
+    /* Reveal */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .rotator .caret { animation: none; }
+      .card:hover, .btn:hover { transform: none; }
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .about-grid, .skills { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 760px) {
+      .wrap { padding: 0 16px; }
+      .menu-btn { display: grid; }
+      .nav-links {
+        position: absolute; top: 64px; left: 0; right: 0;
+        flex-direction: column; align-items: stretch; gap: 2px;
+        padding: 10px 16px 16px;
+        background: var(--bg); border-bottom: 1px solid var(--border);
+        display: none;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 12px; }
+      .hero { padding: 64px 0 48px; }
+      .hero h1 { font-size: clamp(1.9rem, 8.8vw, 2.6rem); }
+      section { padding: 56px 0; }
+      .pub { grid-template-columns: 1fr; gap: 12px; }
+      .edu { grid-template-columns: 1fr; }
+      .card { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a href="#top" class="logo" aria-label="Mohammad Mahdavi, home">
+        <span class="logo-mark">MM</span>
+        <span>Mohammad Mahdavi</span>
+      </a>
+      <div style="display:flex;align-items:center">
+        <nav class="nav-links" id="nav-links" aria-label="Main">
+          <a href="#about">About</a>
+          <a href="#publications">Publications</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-btn" id="theme-toggle" aria-label="Toggle color theme">
+            <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+            <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="wrap">
+        <span class="eyebrow"><span class="dot"></span> Senior AI Engineer · ML Researcher</span>
+        <h1>Hi, I'm <span class="grad-text">Mohammad&nbsp;Mahdavi</span>.</h1>
+        <p class="role">I build robust AI systems and study how to make machine learning trustworthy.</p>
+        <div class="rotator mono" aria-live="polite"><span id="rotator-text">Adversarial robustness in speech models</span><span class="caret" aria-hidden="true"></span></div>
+        <p class="lead">
+          <strong>Vision Lead at DuoAnalytics</strong> and research assistant at the
+          <strong>RIML Lab, Sharif University of Technology</strong> and <strong>LIPhy, Université Grenoble Alpes</strong>.
+          My work spans adversarial robustness, backdoor attacks and defenses, computer vision, retrieval and multimodal LLMs.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#publications">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            View publications
+          </a>
+          <a class="btn" href="https://scholar.google.com/citations?user=pCmXnp4AAAAJ&hl=en" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
+            Google Scholar
+          </a>
+          <a class="btn" href="https://github.com/MohammadMdv" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+            GitHub
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/mohammad-mahdavi-90b795158/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+
+        <div class="stats">
+          <div class="stat reveal"><b class="grad-text">NeurIPS '26</b><span>Main-conference paper</span></div>
+          <div class="stat reveal"><b class="grad-text">TMLR '26</b><span>Journal publication</span></div>
+          <div class="stat reveal"><b class="grad-text">Top 1%</b><span>National university entrance exam</span></div>
+          <div class="stat reveal"><b class="grad-text">IELTS 8.0</b><span>English proficiency</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head reveal"><span class="num mono">01.</span><h2>About</h2><span class="line"></span></div>
+        <div class="about-grid">
+          <div class="card reveal">
+            <p>I'm an AI engineer and researcher working where <strong>robust machine learning</strong> meets <strong>real-world systems</strong>.</p>
+            <p>At <strong>DuoAnalytics</strong>, a New York luxury resale marketplace, I lead the vision work: open-set retrieval that identifies brand and model from a user's photo to power instant valuation. On the research side, I study <strong>adversarial robustness</strong> and <strong>backdoor attacks</strong> in speech recognition with Prof. M. H. Rohban at Sharif, and <strong>self-supervised image quality assessment</strong> and super-resolution with Prof. A. Gourrier and Dr. P. Adibi at Université Grenoble Alpes.</p>
+            <p>Before that, I built anomaly-detection systems over millions of enterprise log events, led a real-time industrial safety vision system, and wrote open-source outlier-detection libraries in Go and Rust.</p>
+            <div class="tags">
+              <span class="tag">Adversarial robustness</span>
+              <span class="tag">Backdoor attacks &amp; defenses</span>
+              <span class="tag">Computer vision</span>
+              <span class="tag">Self-supervised learning</span>
+              <span class="tag">Image quality &amp; super-resolution</span>
+              <span class="tag">Multimodal LLMs</span>
+              <span class="tag">Computational pathology</span>
+              <span class="tag">Graph neural networks</span>
+            </div>
+          </div>
+          <div class="card reveal">
+            <ul class="facts">
+              <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span><div><b>Senior AI Engineer &amp; Vision Lead</b><br/>DuoAnalytics · New York (remote)</div></li>
+              <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6L4.5 18.5A2 2 0 0 0 6.2 21.5h11.6a2 2 0 0 0 1.7-3L14 9V3"/></svg></span><div><b>Research Assistant</b><br/>RIML Lab, Sharif · LIPhy, UGA</div></li>
+              <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span><div><b>B.Sc. Computer Engineering</b><br/>University of Isfahan · 2020 – 2025</div></li>
+              <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></span><div><b>Languages</b><br/>Persian (native) · English (IELTS 8.0) · Italian (A2)</div></li>
+              <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></span><div><b>Teaching Assistant, 2021 – 2024</b><br/>Programming · Advanced Programming · Data Structures</div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Publications -->
+    <section id="publications">
+      <div class="wrap">
+        <div class="section-head reveal"><span class="num mono">02.</span><h2>Publications &amp; preprints</h2><span class="line"></span></div>
+        <div class="pubs">
+          <article class="card pub reveal">
+            <div class="venue"><span class="badge b-neurips">NeurIPS 2026</span><small>Main conference</small></div>
+            <div>
+              <h3><a href="https://arxiv.org/abs/2610.09109" target="_blank" rel="noopener">Breaking Adversarial Transferability in Fine-Tuned Speech Recognition</a></h3>
+              <p>TransferBlock, an adversarial fine-tuning framework using Latent Jacobian Regularization that stops attacks crafted on base ASR models from transferring to their fine-tuned versions, cutting word error rate by <span class="hl">64 percentage points</span> under transferred attacks.</p>
+            </div>
+          </article>
+          <article class="card pub reveal">
+            <div class="venue"><span class="badge b-tmlr">TMLR 2026</span><small>Journal</small></div>
+            <div>
+              <h3><a href="https://openreview.net/forum?id=vngoPfQCJf" target="_blank" rel="noopener">GhostWord: A Fine-Grained Backdoor Attack on Automatic Speech Recognition</a></h3>
+              <p>A time-localized acoustic backdoor attack that manipulates individual words in ASR transcripts, reaching <span class="hl">over 90% attack success</span> on Whisper and Wav2Vec2 while leaving clean-data statistics unchanged.</p>
+            </div>
+          </article>
+          <article class="card pub reveal">
+            <div class="venue"><span class="badge b-review">Under review</span><small>IEEE Trans. Image Processing</small></div>
+            <div>
+              <h3><a href="https://arxiv.org/abs/2602.10744" target="_blank" rel="noopener">Self-Supervised Image Super-Resolution Quality Assessment based on Content-Free Multi-Model Oriented Representation Learning</a></h3>
+              <p>S3RIQA, a self-supervised contrastive framework for no-reference super-resolution quality assessment, together with SRMORSS, a dataset of <span class="hl">15,374 super-resolved real-world images</span> from 13 SR algorithms.</p>
+              <div class="meta mono">arXiv:2602.10744</div>
+            </div>
+          </article>
+          <article class="card pub reveal">
+            <div class="venue"><span class="badge b-pre">Preprint</span><small>arXiv 2026</small></div>
+            <div>
+              <h3><a href="https://arxiv.org/abs/2609.11206" target="_blank" rel="noopener">CryptoL</a></h3>
+              <p>A cryptocurrency forecasting framework that stops large-scale assets from dominating training through scale-balanced loss normalization.</p>
+              <div class="meta mono">arXiv:2609.11206</div>
+            </div>
+          </article>
+          <article class="card pub reveal">
+            <div class="venue"><span class="badge b-pre">Preprint</span><small>engrXiv</small></div>
+            <div>
+              <h3><a href="https://engrxiv.org/preprint/view/4410" target="_blank" rel="noopener">Graph Neural Network-Based Approaches to Drug Repurposing: A Comprehensive Survey</a></h3>
+              <p>A survey of GNN-based methods for identifying new therapeutic uses of existing drugs.</p>
+              <div class="meta mono">engrXiv:4410</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head reveal"><span class="num mono">03.</span><h2>Experience</h2><span class="line"></span></div>
+        <div class="timeline">
+          <article class="card job current reveal">
+            <div class="job-top">
+              <div><h3>Senior AI Engineer &amp; Vision Lead</h3><span class="org">DuoAnalytics</span> <span class="where">· New York, USA (remote)</span></div>
+              <span class="when mono">Jul 2026 – Present</span>
+            </div>
+            <ul>
+              <li>Lead vision work for a New York luxury resale marketplace (handbags, watches, fine jewellery).</li>
+              <li>Built an open-set retrieval system that identifies brand and model from user photos to drive instant valuation: a ViT/DINOv3 backbone fine-tuned with metric-learning objectives and matched through a FAISS/Qdrant index, so new models are added by indexing instead of retraining.</li>
+              <li>Own training on RunPod A100/H100 and serving on GCP (containerised FastAPI encoders on Cloud Run and Vertex AI).</li>
+            </ul>
+          </article>
+          <article class="card job current reveal">
+            <div class="job-top">
+              <div><h3>Research Assistant</h3><span class="org">RIML Lab, Sharif University of Technology</span> <span class="where">· Tehran, Iran</span></div>
+              <span class="when mono">Nov 2025 – Present</span>
+            </div>
+            <ul>
+              <li>Supervisor: Prof. M. H. Rohban.</li>
+              <li>Designed GhostWord, a time-localised acoustic backdoor on ASR reaching &gt;90% attack success on Whisper and Wav2Vec2 (TMLR 2026).</li>
+              <li>Developed TransferBlock with Latent Jacobian Regularization, cutting WER by 64 percentage points under transferred attacks (NeurIPS 2026).</li>
+            </ul>
+          </article>
+          <article class="card job current reveal">
+            <div class="job-top">
+              <div><h3>Research Assistant</h3><span class="org">LIPhy, Université Grenoble Alpes</span> <span class="where">· Grenoble, France (remote)</span></div>
+              <span class="when mono">Nov 2024 – Present</span>
+            </div>
+            <ul>
+              <li>Advisors: Prof. A. Gourrier, Dr. P. Adibi.</li>
+              <li>Co-developed S3RIQA, a self-supervised contrastive framework for no-reference super-resolution quality assessment.</li>
+              <li>Built SRMORSS, a dataset of 15,374 super-resolved real-world images from 13 SR algorithms; developing a Graph-GAN super-resolution model.</li>
+            </ul>
+          </article>
+          <article class="card job current reveal">
+            <div class="job-top">
+              <div><h3>Software Engineer (AI)</h3><span class="org">PayamPardaz</span> <span class="where">· Isfahan, Iran</span></div>
+              <span class="when mono">Aug 2024 – Present</span>
+            </div>
+            <ul>
+              <li>Built PUBA, a Go/C++ behavioural-analytics system over millions of enterprise log events, reaching 94.4% accuracy in few-shot anomaly detection.</li>
+              <li>Contributed to <a href="https://github.com/yzhao062/pyod" target="_blank" rel="noopener" class="hl">PyOD</a> (9K+ stars); deployed Transformer/LSTM/GRU keystroke models for continuous authentication.</li>
+            </ul>
+          </article>
+          <article class="card job reveal">
+            <div class="job-top">
+              <div><h3>AI/ML Researcher</h3><span class="org">ILS Lab, University of Isfahan</span> <span class="where">· Isfahan, Iran</span></div>
+              <span class="when mono">Jun 2023 – Aug 2023</span>
+            </div>
+            <ul>
+              <li>Benchmarked deep-GNN training methods and co-authored a survey on GNN-based drug repurposing.</li>
+            </ul>
+          </article>
+          <article class="card job reveal">
+            <div class="job-top">
+              <div><h3>ML Engineer, Head of AI</h3><span class="org">Orbyx Tech</span> <span class="where">· Isfahan, Iran</span></div>
+              <span class="when mono">Nov 2022 – May 2023</span>
+            </div>
+            <ul>
+              <li>Led Factory Eye, a real-time industrial safety-compliance vision system reaching 95% accuracy in on-site deployment.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head reveal"><span class="num mono">04.</span><h2>Selected projects</h2><span class="line"></span></div>
+        <div class="projects">
+          <a class="card project reveal" href="https://github.com/MohammadMdv/mllm-hwsi-app" target="_blank" rel="noopener">
+            <div class="project-top"><span class="emoji" aria-hidden="true">🧬</span><span class="ext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
+            <h3>MLLM-HWSI Inference &amp; Reproducibility</h3>
+            <p>A config-driven app serving a CVPR 2026 whole-slide multimodal LLM (Qwen2.5-7B + CellViT/CONCH/HIPT encoders) on a single 24 GB GPU. Diagnostics showed the released checkpoint cannot reproduce the paper's image-conditioned results, with the evidence documented.</p>
+            <div class="stack"><span>Python</span><span>Docker</span><span>Multimodal LLM</span></div>
+          </a>
+          <a class="card project reveal" href="https://github.com/MohammadMdv/histopath-retrieval" target="_blank" rel="noopener">
+            <div class="project-top"><span class="emoji" aria-hidden="true">🔬</span><span class="ext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
+            <h3>Histopathology Patch Retrieval</h3>
+            <p>Content-based image-to-image retrieval over NCT-CRC-HE-100K using pathology foundation models (phikon-v2), with patient-disjoint evaluation splits and under 3 GB peak VRAM.</p>
+            <div class="stack"><span>Python</span><span>FAISS</span><span>FastAPI</span><span>Docker</span></div>
+          </a>
+          <a class="card project reveal" href="https://github.com/MohammadMdv/GoOD" target="_blank" rel="noopener">
+            <div class="project-top"><span class="emoji" aria-hidden="true">🐹</span><span class="ext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
+            <h3>GoOD: Go Outlier Detection</h3>
+            <p>A PyOD-inspired anomaly-detection library with 13+ algorithms (IForest, LOF, KNN, HBOS, ECOD, COPOD, PCA, LODA, ABOD, …), built to remove Python throughput bottlenecks on streaming workloads.</p>
+            <div class="stack"><span>Go</span><span>Open source</span></div>
+          </a>
+          <a class="card project reveal" href="https://github.com/MohammadMdv/rsod" target="_blank" rel="noopener">
+            <div class="project-top"><span class="emoji" aria-hidden="true">🦀</span><span class="ext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
+            <h3>RsOD: Rust Outlier Detection</h3>
+            <p>An idiomatic Rust re-implementation of GoOD with the same 13 algorithms and a PyOD-style <code class="mono">fit</code> / <code class="mono">predict</code> / <code class="mono">predict_proba</code> API.</p>
+            <div class="stack"><span>Rust</span><span>Open source</span></div>
+          </a>
+          <a class="card project reveal" href="https://github.com/MohammadMdv/GNN_deepening" target="_blank" rel="noopener">
+            <div class="project-top"><span class="emoji" aria-hidden="true">🕸️</span><span class="ext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
+            <h3>Deepening Graph Neural Networks</h3>
+            <p>A benchmark of tricks for training deep GNNs, reaching 32 layers without over-smoothing.</p>
+            <div class="stack"><span>PyTorch Geometric</span><span>GNNs</span></div>
+          </a>
+          <a class="card project reveal" href="https://github.com/MohammadMdv/Elasticsearch" target="_blank" rel="noopener">
+            <div class="project-top"><span class="emoji" aria-hidden="true">🔎</span><span class="ext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
+            <h3>Semantic Search on Elasticsearch</h3>
+            <p>Index and document management with text and embedding-based kNN search behind a Streamlit interface.</p>
+            <div class="stack"><span>Elasticsearch</span><span>FastAPI</span><span>Streamlit</span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & education -->
+    <section id="skills">
+      <div class="wrap">
+        <div class="section-head reveal"><span class="num mono">05.</span><h2>Skills &amp; education</h2><span class="line"></span></div>
+        <div class="skills">
+          <div class="card skill-group reveal">
+            <h3>Programming</h3>
+            <div class="chips"><span class="chip">Python</span><span class="chip">Go</span><span class="chip">C++</span><span class="chip">Rust</span><span class="chip">Java</span><span class="chip">SQL</span><span class="chip">Bash</span></div>
+          </div>
+          <div class="card skill-group reveal">
+            <h3>ML / Deep learning</h3>
+            <div class="chips"><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Hugging Face Transformers</span><span class="chip">PyTorch Geometric</span><span class="chip">scikit-learn</span><span class="chip">OpenCV</span><span class="chip">PyOD</span></div>
+          </div>
+          <div class="card skill-group reveal">
+            <h3>Retrieval &amp; data</h3>
+            <div class="chips"><span class="chip">FAISS</span><span class="chip">Qdrant</span><span class="chip">Elasticsearch</span><span class="chip">Kibana</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">SciPy</span></div>
+          </div>
+          <div class="card skill-group reveal">
+            <h3>Infrastructure</h3>
+            <div class="chips"><span class="chip">Docker &amp; Compose</span><span class="chip">GCP (Vertex AI, Cloud Run)</span><span class="chip">RunPod (A100/H100)</span><span class="chip">FastAPI</span><span class="chip">Linux</span><span class="chip">Git</span><span class="chip">Weights &amp; Biases</span><span class="chip">LaTeX</span></div>
+          </div>
+        </div>
+
+        <div class="card edu reveal" style="margin-top:16px">
+          <div class="edu-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
+          <div>
+            <div class="job-top">
+              <h3>B.Sc. in Computer Engineering</h3>
+              <span class="when mono" style="color:var(--faint);font-size:.85rem">Sep 2020 – Feb 2025</span>
+            </div>
+            <p class="sub">University of Isfahan · Isfahan, Iran · GPA (last two years) 17.24/20 (≈3.7/4.0)</p>
+            <ul>
+              <li>Top 1% in the Iranian National University Entrance Exam (Math &amp; Physics).</li>
+              <li>Top Student award, 1st and 3rd semesters.</li>
+              <li>Finalist (2nd stage), National Astronomy &amp; Astrophysics Olympiad.</li>
+              <li>Teaching Assistant (2021–2024): Fundamentals of Programming, Advanced Programming, Data Structures.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="card contact reveal">
+          <span class="num mono" style="color:var(--accent)">06. What's next?</span>
+          <h2>Let's <span class="grad-text">work together</span></h2>
+          <p>I'm always happy to talk about research collaborations, robust ML, computer vision or interesting engineering problems.</p>
+          <div class="cta">
+            <a class="btn primary" href="mailto:mhm.ebrh.mahdavi@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+              mhm.ebrh.mahdavi@gmail.com
+            </a>
+            <a class="btn" href="https://www.linkedin.com/in/mohammad-mahdavi-90b795158/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn" href="https://scholar.google.com/citations?user=pCmXnp4AAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
+            <a class="btn" href="https://github.com/MohammadMdv" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year">2026</span> Mohammad Mahdavi · Built with plain HTML &amp; CSS</div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+
+      // Theme toggle
+      var btn = document.getElementById("theme-toggle");
+      var sun = document.getElementById("icon-sun");
+      var moon = document.getElementById("icon-moon");
+      function isDark() {
+        var t = root.getAttribute("data-theme");
+        if (t) return t === "dark";
+        return !window.matchMedia("(prefers-color-scheme: light)").matches;
+      }
+      function syncIcon() {
+        var dark = isDark();
+        sun.style.display = dark ? "block" : "none";
+        moon.style.display = dark ? "none" : "block";
+      }
+      btn.addEventListener("click", function () {
+        var next = isDark() ? "light" : "dark";
+        root.setAttribute("data-theme", next);
+        try { localStorage.setItem("theme", next); } catch (e) {}
+        syncIcon();
+      });
+      syncIcon();
+
+      // Mobile menu
+      var menuBtn = document.getElementById("menu-btn");
+      var links = document.getElementById("nav-links");
+      menuBtn.addEventListener("click", function () {
+        var open = links.classList.toggle("open");
+        menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
+      });
+      links.addEventListener("click", function (e) {
+        if (e.target.tagName === "A") {
+          links.classList.remove("open");
+          menuBtn.setAttribute("aria-expanded", "false");
+        }
+      });
+
+      // Rotating research focus
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var phrases = [
+        "Adversarial robustness in speech models",
+        "Backdoor attacks & defenses",
+        "Open-set visual retrieval",
+        "Self-supervised representation learning",
+        "Multimodal LLMs for pathology"
+      ];
+      var el = document.getElementById("rotator-text");
+      if (!reduce) {
+        var i = 0, j = phrases[0].length, deleting = true;
+        setTimeout(function tick() {
+          var p = phrases[i];
+          if (deleting) {
+            j--;
+            if (j <= 0) { deleting = false; i = (i + 1) % phrases.length; }
+          } else {
+            j++;
+            if (j >= phrases[i].length) { deleting = true; el.textContent = phrases[i]; return setTimeout(tick, 2200); }
+          }
+          el.textContent = phrases[i].slice(0, Math.max(j, 0));
+          setTimeout(tick, deleting ? 28 : 55);
+        }, 2200);
+      }
+
+      // Reveal on scroll
+      var items = document.querySelectorAll(".reveal");
+      if ("IntersectionObserver" in window && !reduce) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (en) {
+            if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
+          });
+        }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+        items.forEach(function (it) { io.observe(it); });
+      } else {
+        items.forEach(function (it) { it.classList.add("in"); });
+      }
+
+      // Highlight the current section in the nav
+      var navAs = links.querySelectorAll("a");
+      var sections = Array.prototype.map.call(navAs, function (a) { return document.querySelector(a.getAttribute("href")); });
+      function onScroll() {
+        var y = window.scrollY + 120, current = -1;
+        sections.forEach(function (s, k) { if (s && s.offsetTop <= y) current = k; });
+        navAs.forEach(function (a, k) { a.classList.toggle("active", k === current); });
+      }
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      document.getElementById("year").textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
