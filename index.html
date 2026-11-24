@@ -3,700 +3,482 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mohammad Mahdavi | AI Engineer & ML Researcher</title>
-  <meta name="description" content="Mohammad Mahdavi: Senior AI Engineer & Vision Lead at DuoAnalytics and ML researcher working on trustworthy and robust machine learning, adversarial robustness and backdoors in speech and vision models." />
+  <meta name="color-scheme" content="light" />
+  <title>Mohammad Mahdavi | AI Engineer and Machine Learning Researcher</title>
+  <meta name="description" content="Mohammad Mahdavi is an AI engineer and machine learning researcher working on trustworthy and robust machine learning, computer vision and speech recognition." />
   <meta name="author" content="Mohammad Mahdavi" />
-  <meta property="og:title" content="Mohammad Mahdavi | AI Engineer & ML Researcher" />
-  <meta property="og:description" content="Trustworthy & robust ML, computer vision, retrieval and multimodal LLMs. NeurIPS 2026 · TMLR 2026." />
-  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#faf8f5" />
+  <meta property="og:type" content="profile" />
   <meta property="og:url" content="https://mohammadmdv.github.io/" />
-  <meta name="theme-color" content="#0b0f17" />
+  <meta property="og:title" content="Mohammad Mahdavi" />
+  <meta property="og:description" content="AI engineer and machine learning researcher working on trustworthy and robust machine learning." />
+  <meta property="og:image" content="https://mohammadmdv.github.io/images/profile.jpg" />
+  <meta name="twitter:card" content="summary" />
   <link rel="canonical" href="https://mohammadmdv.github.io/" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%23a78bfa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='url(%23g)'/%3E%3Ctext x='32' y='42' font-family='Arial,sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='%230b0f17'%3EMM%3C/text%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f4b7a'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23faf8f5'%3EM%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <script>
-    // Apply the saved theme before first paint to avoid a flash.
-    (function () {
-      try {
-        var t = localStorage.getItem("theme");
-        if (t) document.documentElement.setAttribute("data-theme", t);
-      } catch (e) {}
-    })();
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Mohammad Mahdavi",
+    "url": "https://mohammadmdv.github.io/",
+    "image": "https://mohammadmdv.github.io/images/profile.jpg",
+    "jobTitle": "Senior AI Engineer",
+    "worksFor": { "@type": "Organization", "name": "DuoAnalytics" },
+    "alumniOf": { "@type": "CollegeOrUniversity", "name": "University of Isfahan" },
+    "sameAs": [
+      "https://scholar.google.com/citations?user=pCmXnp4AAAAJ",
+      "https://github.com/MohammadMdv",
+      "https://www.linkedin.com/in/mohammad-mahdavi-90b795158/"
+    ]
+  }
   </script>
   <style>
     :root {
-      --bg: #0b0f17;
-      --bg-soft: #111827;
-      --card: rgba(255, 255, 255, 0.035);
-      --card-hover: rgba(255, 255, 255, 0.06);
-      --border: rgba(255, 255, 255, 0.08);
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --faint: #6b7280;
-      --accent: #22d3ee;
-      --accent-2: #a78bfa;
-      --grad: linear-gradient(135deg, var(--accent), var(--accent-2));
-      --glow-1: rgba(34, 211, 238, 0.16);
-      --glow-2: rgba(167, 139, 250, 0.16);
-      --shadow: 0 10px 40px rgba(0, 0, 0, 0.35);
-      --radius: 16px;
-      --maxw: 1080px;
-    }
-    @media (prefers-color-scheme: light) {
-      :root:not([data-theme="dark"]) {
-        --bg: #f8fafc;
-        --bg-soft: #eef2f7;
-        --card: rgba(255, 255, 255, 0.8);
-        --card-hover: #ffffff;
-        --border: rgba(15, 23, 42, 0.09);
-        --text: #0f172a;
-        --muted: #475569;
-        --faint: #64748b;
-        --accent: #0891b2;
-        --accent-2: #7c3aed;
-        --glow-1: rgba(8, 145, 178, 0.12);
-        --glow-2: rgba(124, 58, 237, 0.12);
-        --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-      }
-    }
-    :root[data-theme="light"] {
-      --bg: #f8fafc;
-      --bg-soft: #eef2f7;
-      --card: rgba(255, 255, 255, 0.8);
-      --card-hover: #ffffff;
-      --border: rgba(15, 23, 42, 0.09);
-      --text: #0f172a;
-      --muted: #475569;
-      --faint: #64748b;
-      --accent: #0891b2;
-      --accent-2: #7c3aed;
-      --glow-1: rgba(8, 145, 178, 0.12);
-      --glow-2: rgba(124, 58, 237, 0.12);
-      --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --bg: #faf8f5;
+      --bg-alt: #f3f0ea;
+      --text: #1c1b18;
+      --muted: #5d5950;
+      --faint: #6e6a61;
+      --line: #e4dfd5;
+      --accent: #1f4b7a;
+      --accent-dark: #163a60;
+      --serif: "Fraunces", Georgia, "Times New Roman", serif;
+      --sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      --max: 1000px;
+      --meta: 190px;
     }
 
     *, *::before, *::after { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+    html { -webkit-text-size-adjust: 100%; scroll-padding-top: 84px; }
+    @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
     body {
       margin: 0;
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
       background: var(--bg);
       color: var(--text);
+      font-family: var(--sans);
+      font-size: 16.5px;
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
+      -moz-osx-font-smoothing: grayscale;
     }
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: -1;
-      background:
-        radial-gradient(600px circle at 10% 0%, var(--glow-1), transparent 60%),
-        radial-gradient(700px circle at 95% 20%, var(--glow-2), transparent 60%);
-      pointer-events: none;
-    }
-    a { color: inherit; text-decoration: none; }
-    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
-    .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
-    .mono { font-family: "JetBrains Mono", ui-monospace, monospace; }
-    .grad-text { background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    h1, h2, h3, p, ul, ol, dl, dd, figure { margin: 0; }
+    ul, ol { padding: 0; list-style: none; }
 
-    /* Nav */
-    header.nav {
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { color: var(--accent-dark); }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+    .text-link { border-bottom: 1px solid color-mix(in srgb, var(--accent) 35%, transparent); transition: border-color .2s; }
+    .text-link:hover { border-bottom-color: currentColor; }
+
+    .wrap { width: min(100% - 48px, var(--max)); margin-inline: auto; }
+    .skip { position: absolute; left: 16px; top: -60px; z-index: 100; background: var(--accent); color: #fff; padding: 8px 14px; border-radius: 6px; }
+    .skip:focus { top: 12px; color: #fff; }
+
+    /* Header */
+    .site-header {
       position: sticky; top: 0; z-index: 50;
-      backdrop-filter: saturate(160%) blur(14px);
-      -webkit-backdrop-filter: saturate(160%) blur(14px);
-      background: color-mix(in srgb, var(--bg) 72%, transparent);
-      border-bottom: 1px solid var(--border);
+      background: color-mix(in srgb, var(--bg) 94%, transparent);
+      border-bottom: 1px solid var(--line);
     }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-    .logo { font-weight: 800; letter-spacing: -0.02em; font-size: 1.05rem; display: flex; align-items: center; gap: 10px; }
-    .logo-mark { width: 30px; height: 30px; border-radius: 9px; background: var(--grad); display: grid; place-items: center; color: #0b0f17; font-size: 0.78rem; font-weight: 800; }
-    .nav-links { display: flex; gap: 4px; align-items: center; }
-    .nav-links a { color: var(--muted); font-size: 0.92rem; font-weight: 500; padding: 8px 12px; border-radius: 10px; transition: color .2s, background .2s; }
-    .nav-links a:hover, .nav-links a.active { color: var(--text); background: var(--card-hover); }
-    .icon-btn { background: var(--card); border: 1px solid var(--border); color: var(--text); width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; cursor: pointer; transition: background .2s; }
-    .icon-btn:hover { background: var(--card-hover); }
-    .icon-btn svg { width: 18px; height: 18px; }
-    .menu-btn { display: none; }
-    .nav-actions { display: flex; gap: 8px; align-items: center; margin-left: 8px; }
+    .header-inner { display: flex; align-items: center; gap: 8px 28px; min-height: 64px; flex-wrap: wrap; }
+    .brand { font-family: var(--serif); font-weight: 600; font-size: 1.15rem; color: var(--text); margin-right: auto; letter-spacing: -0.005em; }
+    .brand:hover { color: var(--text); }
+    .site-nav { display: flex; flex-wrap: wrap; gap: 4px 26px; }
+    .site-nav a { color: var(--muted); font-size: 0.92rem; }
+    .site-nav a:hover { color: var(--text); }
 
     /* Hero */
-    .hero { padding: 96px 0 72px; }
-    .eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 0.82rem; color: var(--muted); border: 1px solid var(--border); background: var(--card); padding: 6px 12px; border-radius: 999px; }
-    .dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 4px rgba(34, 197, 94, .18); }
-    .hero h1 { font-size: clamp(2.6rem, 6.5vw, 4.6rem); line-height: 1.05; letter-spacing: -0.035em; margin: 22px 0 14px; font-weight: 800; }
-    .hero .role { font-size: clamp(1.1rem, 2.4vw, 1.4rem); color: var(--muted); margin: 0 0 10px; font-weight: 500; }
-    .rotator { font-size: clamp(1rem, 2vw, 1.15rem); color: var(--accent); min-height: 1.8em; margin-bottom: 30px; }
-    .rotator .caret { display: inline-block; width: 9px; height: 1.1em; background: var(--accent); vertical-align: -0.18em; margin-left: 3px; animation: blink 1s steps(1) infinite; }
-    @keyframes blink { 50% { opacity: 0; } }
-    .hero p.lead { max-width: 680px; color: var(--muted); font-size: 1.08rem; margin: 0 0 34px; }
-    .hero p.lead strong { color: var(--text); font-weight: 600; }
-    .cta { display: flex; flex-wrap: wrap; gap: 12px; }
-    .btn { display: inline-flex; align-items: center; gap: 9px; padding: 12px 18px; border-radius: 12px; font-weight: 600; font-size: 0.95rem; border: 1px solid var(--border); background: var(--card); transition: transform .2s, background .2s, border-color .2s; }
-    .btn:hover { transform: translateY(-2px); background: var(--card-hover); border-color: color-mix(in srgb, var(--accent) 40%, var(--border)); }
-    .btn.primary { background: var(--grad); color: #0b0f17; border: none; }
-    .btn.primary:hover { filter: brightness(1.08); }
-    .btn svg { width: 18px; height: 18px; flex: none; }
+    .hero { padding: 76px 0 72px; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 64px; align-items: center; }
+    .eyebrow { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; }
+    h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(2.3rem, 4.6vw, 3.4rem); line-height: 1.08; letter-spacing: -0.02em; margin-bottom: 22px; }
+    .lead { font-size: 1.1rem; line-height: 1.7; color: var(--muted); max-width: 34em; }
+    .lead + .lead { margin-top: 14px; }
+    .lead strong { color: var(--text); font-weight: 500; }
+    .profiles { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 30px; }
+    .profiles a { display: inline-flex; align-items: center; gap: 8px; font-size: 0.95rem; font-weight: 500; color: var(--text); }
+    .profiles a:hover { color: var(--accent); }
+    .profiles svg { width: 18px; height: 18px; flex: none; color: var(--accent); }
+    .portrait { justify-self: end; width: min(100%, 300px); }
+    .portrait img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 18px; background: var(--bg-alt); box-shadow: 0 1px 2px rgba(28, 27, 24, .06), 0 18px 40px -22px rgba(28, 27, 24, .35); }
 
-    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin-top: 64px; }
-    .stat { border: 1px solid var(--border); background: var(--card); border-radius: var(--radius); padding: 20px; }
-    .stat b { display: block; font-size: 1.55rem; letter-spacing: -0.02em; }
-    .stat span { color: var(--muted); font-size: 0.88rem; }
+    /* Interests band */
+    .band { background: var(--bg-alt); border-block: 1px solid var(--line); }
+    .interests { padding: 24px 0 26px; }
+    .interests .label { margin-bottom: 8px; }
+    .label { font-family: var(--sans); font-size: 0.76rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); }
+    .interests ul { display: flex; flex-wrap: wrap; gap: 4px 0; }
+    .interests li { font-family: var(--serif); font-size: 1.04rem; }
+    .interests li:not(:last-child)::after { content: "\00b7"; color: var(--accent); margin: 0 12px; }
 
     /* Sections */
-    section { padding: 72px 0; }
-    .section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 34px; }
-    .section-head .num { color: var(--accent); font-size: 0.9rem; }
-    .section-head h2 { font-size: clamp(1.6rem, 3.4vw, 2.1rem); letter-spacing: -0.025em; margin: 0; font-weight: 750; }
-    .section-head .line { flex: 1; height: 1px; background: var(--border); }
+    .section { padding: 84px 0; }
+    .section.alt { background: var(--bg-alt); border-block: 1px solid var(--line); }
+    .section-title { font-family: var(--serif); font-weight: 500; font-size: clamp(1.75rem, 3.2vw, 2.25rem); line-height: 1.2; letter-spacing: -0.012em; margin-bottom: 36px; }
+    .group-label { margin: 44px 0 22px; }
+    .section-title + .group-label { margin-top: 0; }
 
-    .card { border: 1px solid var(--border); background: var(--card); border-radius: var(--radius); padding: 24px; transition: transform .25s, background .25s, border-color .25s, box-shadow .25s; }
-    .card:hover { transform: translateY(-3px); background: var(--card-hover); border-color: color-mix(in srgb, var(--accent) 30%, var(--border)); box-shadow: var(--shadow); }
-
-    /* About */
-    .about-grid { display: grid; grid-template-columns: 1.35fr 1fr; gap: 24px; }
-    .about-grid p { color: var(--muted); margin: 0 0 16px; }
-    .about-grid p strong { color: var(--text); font-weight: 600; }
-    .facts { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
-    .facts li { display: flex; gap: 12px; align-items: flex-start; color: var(--muted); font-size: 0.95rem; }
-    .facts li b { color: var(--text); font-weight: 600; }
-    .facts .ic { flex: none; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: color-mix(in srgb, var(--accent) 12%, transparent); color: var(--accent); }
-    .facts .ic svg { width: 17px; height: 17px; }
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; }
-    .tag { font-size: 0.82rem; color: var(--text); border: 1px solid var(--border); background: var(--card); padding: 6px 12px; border-radius: 999px; }
-
-    /* Publications */
-    .pubs { display: grid; gap: 16px; }
-    .pub { display: grid; grid-template-columns: 130px 1fr; gap: 22px; align-items: start; }
-    .venue { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 2px; }
-    .venue .badge { font-size: 0.78rem; font-weight: 700; padding: 5px 10px; border-radius: 8px; letter-spacing: 0.02em; }
-    .venue small { color: var(--faint); font-size: 0.78rem; padding-left: 2px; }
-    .b-neurips { background: rgba(167, 139, 250, .16); color: var(--accent-2); }
-    .b-tmlr { background: rgba(34, 211, 238, .14); color: var(--accent); }
-    .b-review { background: rgba(251, 146, 60, .15); color: #f59e0b; }
-    .b-pre { background: rgba(148, 163, 184, .15); color: var(--muted); }
-    .pub h3 { margin: 0 0 8px; font-size: 1.08rem; line-height: 1.4; letter-spacing: -0.01em; }
-    .pub h3 a:hover { color: var(--accent); }
-    .pub p { margin: 0; color: var(--muted); font-size: 0.95rem; }
-    .pub .meta { margin-top: 10px; font-size: 0.82rem; color: var(--faint); }
-    .hl { color: var(--text); font-weight: 600; }
-
-    /* Experience timeline */
-    .timeline { position: relative; padding-left: 28px; }
-    .timeline::before { content: ""; position: absolute; left: 7px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(var(--accent), var(--accent-2), transparent); border-radius: 2px; }
-    .job { position: relative; margin-bottom: 18px; }
-    .job::before { content: ""; position: absolute; left: -27px; top: 30px; width: 14px; height: 14px; border-radius: 50%; background: var(--bg); border: 3px solid var(--accent); }
-    .job.current::before { background: var(--accent); box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 20%, transparent); }
-    .job-top { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px 16px; align-items: baseline; }
-    .job h3 { margin: 0; font-size: 1.08rem; letter-spacing: -0.01em; }
-    .job .org { color: var(--accent); font-weight: 600; font-size: 0.95rem; }
-    .job .when { color: var(--faint); font-size: 0.85rem; white-space: nowrap; }
-    .job .where { color: var(--faint); font-size: 0.85rem; }
-    .job ul { margin: 12px 0 0; padding-left: 18px; color: var(--muted); font-size: 0.95rem; }
-    .job li { margin-bottom: 6px; }
-    .job li::marker { color: var(--accent); }
+    /* Two-column entries (meta on the left) */
+    .entries { border-top: 1px solid var(--line); }
+    .entry { display: grid; grid-template-columns: var(--meta) minmax(0, 1fr); gap: 32px; padding: 26px 0; border-bottom: 1px solid var(--line); }
+    .entry-meta { color: var(--muted); font-size: 0.9rem; line-height: 1.5; padding-top: 4px; font-variant-numeric: tabular-nums; }
+    .entry-meta span { display: block; }
+    .entry-meta .sub { color: var(--faint); font-size: 0.85rem; margin-top: 2px; }
+    .entry h3 { font-family: var(--serif); font-weight: 500; font-size: 1.28rem; line-height: 1.35; letter-spacing: -0.005em; }
+    .entry h3 a { color: var(--text); }
+    .entry h3 a:hover { color: var(--accent); }
+    .org { color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 3px; }
+    .entry p.desc { color: var(--muted); font-size: 0.97rem; margin-top: 8px; }
+    .entry ul.points { display: grid; gap: 8px; margin-top: 12px; }
+    .entry ul.points li { position: relative; padding-left: 20px; color: var(--muted); font-size: 0.97rem; }
+    .entry ul.points li::before { content: ""; position: absolute; left: 0; top: 0.78em; width: 8px; height: 1px; background: var(--accent); }
+    .pub-links { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 10px; font-size: 0.88rem; font-weight: 500; }
+    .pub-links a::after { content: " \2197"; font-size: 0.85em; }
 
     /* Projects */
-    .projects { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
-    .project { display: flex; flex-direction: column; }
-    .project-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px; }
-    .project .emoji { font-size: 1.6rem; }
-    .project .ext { color: var(--faint); transition: color .2s, transform .2s; }
-    .project:hover .ext { color: var(--accent); transform: translate(2px, -2px); }
-    .project .ext svg { width: 18px; height: 18px; }
-    .project h3 { margin: 0 0 8px; font-size: 1.05rem; letter-spacing: -0.01em; }
-    .project p { margin: 0 0 16px; color: var(--muted); font-size: 0.92rem; flex: 1; }
-    .stack { display: flex; flex-wrap: wrap; gap: 6px; }
-    .stack span { font-size: 0.75rem; color: var(--muted); background: var(--bg-soft); border: 1px solid var(--border); padding: 3px 9px; border-radius: 6px; }
+    .projects { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; border-top: 1px solid var(--line); }
+    .project { padding: 24px 0; border-bottom: 1px solid var(--line); }
+    .project h3 { font-family: var(--serif); font-weight: 500; font-size: 1.18rem; line-height: 1.35; }
+    .project h3 a { color: var(--text); }
+    .project h3 a:hover { color: var(--accent); }
+    .project p { color: var(--muted); font-size: 0.95rem; margin-top: 6px; }
+    .project .tech { color: var(--faint); font-size: 0.82rem; font-weight: 500; letter-spacing: 0.02em; margin-top: 10px; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 0.86em; }
 
     /* Skills */
-    .skills { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-    .skill-group h3 { margin: 0 0 14px; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent); font-weight: 600; }
-    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
-    .chip { font-size: 0.88rem; padding: 7px 12px; border-radius: 10px; background: var(--bg-soft); border: 1px solid var(--border); }
-
-    /* Education */
-    .edu { display: grid; grid-template-columns: auto 1fr; gap: 22px; align-items: start; }
-    .edu-ic { width: 56px; height: 56px; border-radius: 14px; background: var(--grad); display: grid; place-items: center; color: #0b0f17; }
-    .edu-ic svg { width: 28px; height: 28px; }
-    .edu h3 { margin: 0; font-size: 1.15rem; }
-    .edu .sub { color: var(--muted); margin: 2px 0 14px; }
-    .edu ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: 0.95rem; }
-    .edu li { margin-bottom: 6px; }
-    .edu li::marker { color: var(--accent); }
+    .skills { border-top: 1px solid var(--line); }
+    .skill { display: grid; grid-template-columns: var(--meta) minmax(0, 1fr); gap: 32px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+    .skill dt { color: var(--muted); font-size: 0.9rem; padding-top: 1px; }
+    .skill dd { font-size: 0.98rem; }
 
     /* Contact */
-    .contact { text-align: center; padding: 56px 28px; position: relative; overflow: hidden; }
-    .contact h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); letter-spacing: -0.03em; margin: 0 0 12px; }
-    .contact p { color: var(--muted); max-width: 560px; margin: 0 auto 28px; }
-    .contact .cta { justify-content: center; }
-
-    footer { padding: 36px 0 48px; color: var(--faint); font-size: 0.85rem; text-align: center; }
-
-    /* Reveal */
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
-    .reveal.in { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      .reveal { opacity: 1; transform: none; transition: none; }
-      .rotator .caret { animation: none; }
-      .card:hover, .btn:hover { transform: none; }
-    }
+    .contact { padding: 84px 0 36px; }
+    .contact p { color: var(--muted); max-width: 34em; }
+    .contact .section-title { margin-bottom: 14px; }
+    .contact .email { display: inline-block; margin-top: 22px; font-family: var(--serif); font-size: 1.35rem; font-weight: 500; color: var(--text); border-bottom: 1px solid var(--line); }
+    .contact .email:hover { color: var(--accent); border-bottom-color: currentColor; }
+    .legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 24px; margin-top: 64px; padding-top: 22px; border-top: 1px solid var(--line); color: var(--faint); font-size: 0.85rem; }
 
     /* Responsive */
-    @media (max-width: 900px) {
-      .about-grid, .skills { grid-template-columns: 1fr; }
-      .stats { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 860px) {
+      body { font-size: 16px; }
+      .wrap { width: min(100% - 32px, var(--max)); }
+      .site-header { position: static; }
+      .header-inner { padding: 14px 0; }
+      .site-nav { gap: 4px 20px; }
+      .hero { padding: 36px 0 56px; }
+      .hero-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+      .portrait { order: -1; justify-self: start; width: min(52%, 200px); }
+      .section { padding: 60px 0; }
+      .entry, .skill { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+      .entry-meta { padding-top: 0; display: flex; flex-wrap: wrap; gap: 0 10px; }
+      .entry-meta .sub { margin-top: 0; }
+      .entry-meta .sub::before { content: "\00b7"; margin-right: 10px; }
+      .projects { grid-template-columns: minmax(0, 1fr); }
+      .contact { padding-top: 60px; }
+      .contact .email { font-size: 1.15rem; }
+      .legal { margin-top: 44px; }
     }
-    @media (max-width: 760px) {
-      .wrap { padding: 0 16px; }
-      .menu-btn { display: grid; }
-      .nav-links {
-        position: absolute; top: 64px; left: 0; right: 0;
-        flex-direction: column; align-items: stretch; gap: 2px;
-        padding: 10px 16px 16px;
-        background: var(--bg); border-bottom: 1px solid var(--border);
-        display: none;
-      }
-      .nav-links.open { display: flex; }
-      .nav-links a { padding: 12px; }
-      .hero { padding: 64px 0 48px; }
-      .hero h1 { font-size: clamp(1.9rem, 8.8vw, 2.6rem); }
-      section { padding: 56px 0; }
-      .pub { grid-template-columns: 1fr; gap: 12px; }
-      .edu { grid-template-columns: 1fr; }
-      .card { padding: 20px; }
+
+    @media print {
+      :root { --bg: #fff; --bg-alt: #fff; }
+      .site-header, .skip, .portrait { display: none; }
+      .hero { padding: 0 0 16px; }
+      .hero-grid { grid-template-columns: 1fr; }
+      .section { padding: 24px 0; }
+      .entry, .project { break-inside: avoid; }
     }
   </style>
 </head>
 <body>
-  <header class="nav">
-    <div class="wrap nav-inner">
-      <a href="#top" class="logo" aria-label="Mohammad Mahdavi, home">
-        <span class="logo-mark">MM</span>
-        <span>Mohammad Mahdavi</span>
-      </a>
-      <div style="display:flex;align-items:center">
-        <nav class="nav-links" id="nav-links" aria-label="Main">
-          <a href="#about">About</a>
-          <a href="#publications">Publications</a>
-          <a href="#experience">Experience</a>
-          <a href="#projects">Projects</a>
-          <a href="#skills">Skills</a>
-          <a href="#contact">Contact</a>
-        </nav>
-        <div class="nav-actions">
-          <button class="icon-btn" id="theme-toggle" aria-label="Toggle color theme">
-            <svg id="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
-            <svg id="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-          </button>
-          <button class="icon-btn menu-btn" id="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-          </button>
-        </div>
-      </div>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top">Mohammad Mahdavi</a>
+      <nav class="site-nav" aria-label="Sections">
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </div>
   </header>
 
-  <main id="top">
-    <!-- Hero -->
-    <section class="hero">
-      <div class="wrap">
-        <span class="eyebrow"><span class="dot"></span> Senior AI Engineer · ML Researcher</span>
-        <h1>Hi, I'm <span class="grad-text">Mohammad&nbsp;Mahdavi</span>.</h1>
-        <p class="role">I build robust AI systems and study how to make machine learning trustworthy.</p>
-        <div class="rotator mono" aria-live="polite"><span id="rotator-text">Adversarial robustness in speech models</span><span class="caret" aria-hidden="true"></span></div>
-        <p class="lead">
-          <strong>Vision Lead at DuoAnalytics</strong> and research assistant at the
-          <strong>RIML Lab, Sharif University of Technology</strong> and <strong>LIPhy, Université Grenoble Alpes</strong>.
-          My work spans adversarial robustness, backdoor attacks and defenses, computer vision, retrieval and multimodal LLMs.
-        </p>
-        <div class="cta">
-          <a class="btn primary" href="#publications">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-            View publications
-          </a>
-          <a class="btn" href="https://scholar.google.com/citations?user=pCmXnp4AAAAJ&hl=en" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-24L0 9.5l4.838 3.94A8 8 0 0 1 12 9a8 8 0 0 1 7.162 4.44L24 9.5z"/></svg>
-            Google Scholar
-          </a>
-          <a class="btn" href="https://github.com/MohammadMdv" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
-            GitHub
-          </a>
-          <a class="btn" href="https://www.linkedin.com/in/mohammad-mahdavi-90b795158/" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>
-            LinkedIn
-          </a>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">AI Engineer · Machine Learning Researcher</p>
+          <h1>Mohammad Mahdavi</h1>
+          <p class="lead">
+            I am a Senior AI Engineer at <strong>DuoAnalytics</strong>, where I lead computer vision, and a research assistant
+            at the <strong>RIML Lab, Sharif University of Technology</strong> and <strong>LIPhy, Université Grenoble Alpes</strong>.
+          </p>
+          <p class="lead">
+            I work on trustworthy and robust machine learning: so far,
+            <a class="text-link" href="https://openreview.net/forum?id=vngoPfQCJf">backdoor attacks</a> and
+            <a class="text-link" href="https://openreview.net/forum?id=Hk5S6s2xN9#discussion">adversarial transferability</a> in speech recognition, and
+            <a class="text-link" href="https://arxiv.org/abs/2602.10744">self-supervised quality assessment</a> for image super-resolution.
+          </p>
+          <ul class="profiles" aria-label="Profiles">
+            <li><a href="mailto:mhm.ebrh.mahdavi@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Email</a></li>
+            <li><a href="https://scholar.google.com/citations?user=pCmXnp4AAAAJ&amp;hl=en">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 0 9l12 6 9-4.5V17h2V9L12 3zM5 13.2v4c0 1.7 3.1 3.3 7 3.3s7-1.6 7-3.3v-4l-7 3.5-7-3.5z"/></svg>Google Scholar</a></li>
+            <li><a href="https://github.com/MohammadMdv">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2 0-.4-.5-1.6.2-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/mohammad-mahdavi-90b795158/">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a></li>
+          </ul>
         </div>
-
-        <div class="stats">
-          <div class="stat reveal"><b class="grad-text">NeurIPS '26</b><span>Main-conference paper</span></div>
-          <div class="stat reveal"><b class="grad-text">TMLR '26</b><span>Journal publication</span></div>
-          <div class="stat reveal"><b class="grad-text">Top 1%</b><span>National university entrance exam</span></div>
-          <div class="stat reveal"><b class="grad-text">IELTS 8.0</b><span>English proficiency</span></div>
-        </div>
+        <figure class="portrait">
+          <img src="images/profile.jpg" alt="Portrait of Mohammad Mahdavi" width="440" height="550" fetchpriority="high" />
+        </figure>
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about">
-      <div class="wrap">
-        <div class="section-head reveal"><span class="num mono">01.</span><h2>About</h2><span class="line"></span></div>
-        <div class="about-grid">
-          <div class="card reveal">
-            <p>I'm an AI engineer and researcher working where <strong>robust machine learning</strong> meets <strong>real-world systems</strong>.</p>
-            <p>At <strong>DuoAnalytics</strong>, a New York luxury resale marketplace, I lead the vision work: open-set retrieval that identifies brand and model from a user's photo to power instant valuation. On the research side, I study <strong>adversarial robustness</strong> and <strong>backdoor attacks</strong> in speech recognition with Prof. M. H. Rohban at Sharif, and <strong>self-supervised image quality assessment</strong> and super-resolution with Prof. A. Gourrier and Dr. P. Adibi at Université Grenoble Alpes.</p>
-            <p>Before that, I built anomaly-detection systems over millions of enterprise log events, led a real-time industrial safety vision system, and wrote open-source outlier-detection libraries in Go and Rust.</p>
-            <div class="tags">
-              <span class="tag">Adversarial robustness</span>
-              <span class="tag">Backdoor attacks &amp; defenses</span>
-              <span class="tag">Computer vision</span>
-              <span class="tag">Self-supervised learning</span>
-              <span class="tag">Image quality &amp; super-resolution</span>
-              <span class="tag">Multimodal LLMs</span>
-              <span class="tag">Computational pathology</span>
-              <span class="tag">Graph neural networks</span>
-            </div>
-          </div>
-          <div class="card reveal">
-            <ul class="facts">
-              <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span><div><b>Senior AI Engineer &amp; Vision Lead</b><br/>DuoAnalytics · New York (remote)</div></li>
-              <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6M10 3v6L4.5 18.5A2 2 0 0 0 6.2 21.5h11.6a2 2 0 0 0 1.7-3L14 9V3"/></svg></span><div><b>Research Assistant</b><br/>RIML Lab, Sharif · LIPhy, UGA</div></li>
-              <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span><div><b>B.Sc. Computer Engineering</b><br/>University of Isfahan · 2020 – 2025</div></li>
-              <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></span><div><b>Languages</b><br/>Persian (native) · English (IELTS 8.0) · Italian (A2)</div></li>
-              <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></span><div><b>Teaching Assistant, 2021 – 2024</b><br/>Programming · Advanced Programming · Data Structures</div></li>
-            </ul>
-          </div>
-        </div>
+    <section class="band" aria-label="Research interests">
+      <div class="wrap interests">
+        <h2 class="label">Research interests</h2>
+        <ul>
+          <li>Adversarial Robustness</li>
+          <li>Backdoor Attacks &amp; Defenses</li>
+          <li>Self-Supervised Learning</li>
+          <li>Computer Vision</li>
+          <li>Multimodal LLMs</li>
+        </ul>
       </div>
     </section>
 
-    <!-- Publications -->
-    <section id="publications">
+    <section class="section" id="publications">
       <div class="wrap">
-        <div class="section-head reveal"><span class="num mono">02.</span><h2>Publications &amp; preprints</h2><span class="line"></span></div>
-        <div class="pubs">
-          <article class="card pub reveal">
-            <div class="venue"><span class="badge b-neurips">NeurIPS 2026</span><small>Main conference</small></div>
+        <h2 class="section-title">Publications</h2>
+        <ol class="entries">
+          <li class="entry">
+            <div class="entry-meta"><span>NeurIPS 2026</span></div>
             <div>
-              <h3><a href="https://arxiv.org/abs/2610.09109" target="_blank" rel="noopener">Breaking Adversarial Transferability in Fine-Tuned Speech Recognition</a></h3>
-              <p>TransferBlock, an adversarial fine-tuning framework using Latent Jacobian Regularization that stops attacks crafted on base ASR models from transferring to their fine-tuned versions, cutting word error rate by <span class="hl">64 percentage points</span> under transferred attacks.</p>
+              <h3><a href="https://openreview.net/forum?id=Hk5S6s2xN9#discussion">Breaking Adversarial Transferability in Fine-Tuned Speech Recognition</a></h3>
+              <p class="desc">An adversarial fine-tuning framework based on Latent Jacobian Regularization that keeps attacks crafted on a base ASR model from transferring to its fine-tuned versions.</p>
+              <p class="pub-links"><a href="https://openreview.net/forum?id=Hk5S6s2xN9#discussion">OpenReview</a></p>
             </div>
-          </article>
-          <article class="card pub reveal">
-            <div class="venue"><span class="badge b-tmlr">TMLR 2026</span><small>Journal</small></div>
+          </li>
+          <li class="entry">
+            <div class="entry-meta"><span>TMLR 2026</span></div>
             <div>
-              <h3><a href="https://openreview.net/forum?id=vngoPfQCJf" target="_blank" rel="noopener">GhostWord: A Fine-Grained Backdoor Attack on Automatic Speech Recognition</a></h3>
-              <p>A time-localized acoustic backdoor attack that manipulates individual words in ASR transcripts, reaching <span class="hl">over 90% attack success</span> on Whisper and Wav2Vec2 while leaving clean-data statistics unchanged.</p>
+              <h3><a href="https://openreview.net/forum?id=vngoPfQCJf">GhostWord: A Fine-Grained Backdoor Attack on Automatic Speech Recognition</a></h3>
+              <p class="desc">A time-localized acoustic backdoor that manipulates individual words in the transcripts of Whisper and Wav2Vec2 while leaving clean-data behavior unchanged.</p>
+              <p class="pub-links"><a href="https://openreview.net/forum?id=vngoPfQCJf">OpenReview</a></p>
             </div>
-          </article>
-          <article class="card pub reveal">
-            <div class="venue"><span class="badge b-review">Under review</span><small>IEEE Trans. Image Processing</small></div>
+          </li>
+          <li class="entry">
+            <div class="entry-meta"><span>Under review</span><span class="sub">IEEE Trans. Image Processing</span></div>
             <div>
-              <h3><a href="https://arxiv.org/abs/2602.10744" target="_blank" rel="noopener">Self-Supervised Image Super-Resolution Quality Assessment based on Content-Free Multi-Model Oriented Representation Learning</a></h3>
-              <p>S3RIQA, a self-supervised contrastive framework for no-reference super-resolution quality assessment, together with SRMORSS, a dataset of <span class="hl">15,374 super-resolved real-world images</span> from 13 SR algorithms.</p>
-              <div class="meta mono">arXiv:2602.10744</div>
+              <h3><a href="https://arxiv.org/abs/2602.10744">Self-Supervised Image Super-Resolution Quality Assessment based on Content-Free Multi-Model Oriented Representation Learning</a></h3>
+              <p class="desc">S3RIQA, a self-supervised contrastive framework for no-reference super-resolution quality assessment, and SRMORSS, a dataset of 15,374 super-resolved real-world images from 13 SR algorithms.</p>
+              <p class="pub-links"><a href="https://arxiv.org/abs/2602.10744">arXiv</a></p>
             </div>
-          </article>
-          <article class="card pub reveal">
-            <div class="venue"><span class="badge b-pre">Preprint</span><small>arXiv 2026</small></div>
+          </li>
+          <li class="entry">
+            <div class="entry-meta"><span>Preprint</span><span class="sub">arXiv 2026</span></div>
             <div>
-              <h3><a href="https://arxiv.org/abs/2609.11206" target="_blank" rel="noopener">CryptoL</a></h3>
-              <p>A cryptocurrency forecasting framework that stops large-scale assets from dominating training through scale-balanced loss normalization.</p>
-              <div class="meta mono">arXiv:2609.11206</div>
+              <h3><a href="https://arxiv.org/abs/2609.11206">CryptoL</a></h3>
+              <p class="desc">A cryptocurrency forecasting framework that uses scale-balanced loss normalization so that large-cap assets do not dominate training.</p>
+              <p class="pub-links"><a href="https://arxiv.org/abs/2609.11206">arXiv</a></p>
             </div>
-          </article>
-          <article class="card pub reveal">
-            <div class="venue"><span class="badge b-pre">Preprint</span><small>engrXiv</small></div>
+          </li>
+          <li class="entry">
+            <div class="entry-meta"><span>Preprint</span><span class="sub">engrXiv</span></div>
             <div>
-              <h3><a href="https://engrxiv.org/preprint/view/4410" target="_blank" rel="noopener">Graph Neural Network-Based Approaches to Drug Repurposing: A Comprehensive Survey</a></h3>
-              <p>A survey of GNN-based methods for identifying new therapeutic uses of existing drugs.</p>
-              <div class="meta mono">engrXiv:4410</div>
+              <h3><a href="https://engrxiv.org/preprint/view/4410">Graph Neural Network-Based Approaches to Drug Repurposing: A Comprehensive Survey</a></h3>
+              <p class="desc">A survey of graph neural network methods for identifying new therapeutic uses of existing drugs.</p>
+              <p class="pub-links"><a href="https://engrxiv.org/preprint/view/4410">engrXiv</a></p>
             </div>
-          </article>
-        </div>
+          </li>
+        </ol>
       </div>
     </section>
 
-    <!-- Experience -->
-    <section id="experience">
+    <section class="section alt" id="experience">
       <div class="wrap">
-        <div class="section-head reveal"><span class="num mono">03.</span><h2>Experience</h2><span class="line"></span></div>
-        <div class="timeline">
-          <article class="card job current reveal">
-            <div class="job-top">
-              <div><h3>Senior AI Engineer &amp; Vision Lead</h3><span class="org">DuoAnalytics</span> <span class="where">· New York, USA (remote)</span></div>
-              <span class="when mono">Jul 2026 – Present</span>
+        <h2 class="section-title">Experience</h2>
+
+        <h3 class="label group-label">Research</h3>
+        <div class="entries">
+          <article class="entry">
+            <div class="entry-meta"><span>Nov 2025 – Present</span><span class="sub">Tehran, Iran</span></div>
+            <div>
+              <h3>Research Assistant</h3>
+              <p class="org">RIML Lab, Sharif University of Technology · Supervisor: Prof. M. H. Rohban</p>
+              <ul class="points">
+                <li>Designed GhostWord, a time-localized acoustic backdoor attack on ASR that reaches over 90% attack success on Whisper and Wav2Vec2.</li>
+                <li>Developed TransferBlock, which uses Latent Jacobian Regularization to stop attacks on base ASR models from transferring to fine-tuned versions.</li>
+              </ul>
             </div>
-            <ul>
-              <li>Lead vision work for a New York luxury resale marketplace (handbags, watches, fine jewellery).</li>
-              <li>Built an open-set retrieval system that identifies brand and model from user photos to drive instant valuation: a ViT/DINOv3 backbone fine-tuned with metric-learning objectives and matched through a FAISS/Qdrant index, so new models are added by indexing instead of retraining.</li>
-              <li>Own training on RunPod A100/H100 and serving on GCP (containerised FastAPI encoders on Cloud Run and Vertex AI).</li>
-            </ul>
           </article>
-          <article class="card job current reveal">
-            <div class="job-top">
-              <div><h3>Research Assistant</h3><span class="org">RIML Lab, Sharif University of Technology</span> <span class="where">· Tehran, Iran</span></div>
-              <span class="when mono">Nov 2025 – Present</span>
+          <article class="entry">
+            <div class="entry-meta"><span>Nov 2024 – Present</span><span class="sub">Grenoble, France (remote)</span></div>
+            <div>
+              <h3>Research Assistant</h3>
+              <p class="org">LIPhy, Université Grenoble Alpes · Advisors: Prof. A. Gourrier, Dr. P. Adibi</p>
+              <ul class="points">
+                <li>Co-developed S3RIQA, a self-supervised contrastive framework for no-reference super-resolution quality assessment.</li>
+                <li>Built the SRMORSS dataset of 15,374 super-resolved real-world images; developing a Graph-GAN super-resolution model.</li>
+              </ul>
             </div>
-            <ul>
-              <li>Supervisor: Prof. M. H. Rohban.</li>
-              <li>Designed GhostWord, a time-localised acoustic backdoor on ASR reaching &gt;90% attack success on Whisper and Wav2Vec2 (TMLR 2026).</li>
-              <li>Developed TransferBlock with Latent Jacobian Regularization, cutting WER by 64 percentage points under transferred attacks (NeurIPS 2026).</li>
-            </ul>
           </article>
-          <article class="card job current reveal">
-            <div class="job-top">
-              <div><h3>Research Assistant</h3><span class="org">LIPhy, Université Grenoble Alpes</span> <span class="where">· Grenoble, France (remote)</span></div>
-              <span class="when mono">Nov 2024 – Present</span>
+          <article class="entry">
+            <div class="entry-meta"><span>Jun 2023 – Aug 2023</span><span class="sub">Isfahan, Iran</span></div>
+            <div>
+              <h3>AI/ML Researcher</h3>
+              <p class="org">ILS Lab, University of Isfahan</p>
+              <ul class="points">
+                <li>Benchmarked training techniques for deep graph neural networks and co-authored a survey on GNN-based drug repurposing.</li>
+              </ul>
             </div>
-            <ul>
-              <li>Advisors: Prof. A. Gourrier, Dr. P. Adibi.</li>
-              <li>Co-developed S3RIQA, a self-supervised contrastive framework for no-reference super-resolution quality assessment.</li>
-              <li>Built SRMORSS, a dataset of 15,374 super-resolved real-world images from 13 SR algorithms; developing a Graph-GAN super-resolution model.</li>
-            </ul>
           </article>
-          <article class="card job current reveal">
-            <div class="job-top">
-              <div><h3>Software Engineer (AI)</h3><span class="org">PayamPardaz</span> <span class="where">· Isfahan, Iran</span></div>
-              <span class="when mono">Aug 2024 – Present</span>
+        </div>
+
+        <h3 class="label group-label">Industry</h3>
+        <div class="entries">
+          <article class="entry">
+            <div class="entry-meta"><span>Jul 2026 – Present</span><span class="sub">New York, USA (remote)</span></div>
+            <div>
+              <h3>Senior AI Engineer &amp; Vision Lead</h3>
+              <p class="org">DuoAnalytics</p>
+              <ul class="points">
+                <li>Lead the vision work for a luxury resale marketplace covering handbags, watches and fine jewelry.</li>
+                <li>Built an open-set retrieval system that identifies brand and model from user photos for instant valuation: a ViT/DINOv3 backbone fine-tuned with metric learning and matched through a FAISS/Qdrant index, so new models are added by indexing rather than retraining.</li>
+                <li>Own training on RunPod (A100/H100) and serving on GCP with containerized FastAPI encoders on Cloud Run and Vertex AI.</li>
+              </ul>
             </div>
-            <ul>
-              <li>Built PUBA, a Go/C++ behavioural-analytics system over millions of enterprise log events, reaching 94.4% accuracy in few-shot anomaly detection.</li>
-              <li>Contributed to <a href="https://github.com/yzhao062/pyod" target="_blank" rel="noopener" class="hl">PyOD</a> (9K+ stars); deployed Transformer/LSTM/GRU keystroke models for continuous authentication.</li>
-            </ul>
           </article>
-          <article class="card job reveal">
-            <div class="job-top">
-              <div><h3>AI/ML Researcher</h3><span class="org">ILS Lab, University of Isfahan</span> <span class="where">· Isfahan, Iran</span></div>
-              <span class="when mono">Jun 2023 – Aug 2023</span>
+          <article class="entry">
+            <div class="entry-meta"><span>Aug 2024 – Present</span><span class="sub">Isfahan, Iran</span></div>
+            <div>
+              <h3>Software Engineer (AI)</h3>
+              <p class="org">PayamPardaz</p>
+              <ul class="points">
+                <li>Built PUBA, a Go/C++ behavioral analytics system over millions of enterprise log events, reaching 94.4% accuracy in few-shot anomaly detection.</li>
+                <li>Contributed to <a class="text-link" href="https://github.com/yzhao062/pyod">PyOD</a> and deployed Transformer, LSTM and GRU keystroke-dynamics models for continuous authentication.</li>
+              </ul>
             </div>
-            <ul>
-              <li>Benchmarked deep-GNN training methods and co-authored a survey on GNN-based drug repurposing.</li>
-            </ul>
           </article>
-          <article class="card job reveal">
-            <div class="job-top">
-              <div><h3>ML Engineer, Head of AI</h3><span class="org">Orbyx Tech</span> <span class="where">· Isfahan, Iran</span></div>
-              <span class="when mono">Nov 2022 – May 2023</span>
+          <article class="entry">
+            <div class="entry-meta"><span>Nov 2022 – May 2023</span><span class="sub">Isfahan, Iran</span></div>
+            <div>
+              <h3>Machine Learning Engineer, Head of AI</h3>
+              <p class="org">Orbyx Tech</p>
+              <ul class="points">
+                <li>Led Factory Eye, a real-time computer vision system for industrial safety compliance, reaching 95% accuracy in on-site deployment.</li>
+              </ul>
             </div>
-            <ul>
-              <li>Led Factory Eye, a real-time industrial safety-compliance vision system reaching 95% accuracy in on-site deployment.</li>
-            </ul>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects">
+    <section class="section" id="education">
       <div class="wrap">
-        <div class="section-head reveal"><span class="num mono">04.</span><h2>Selected projects</h2><span class="line"></span></div>
+        <h2 class="section-title">Education &amp; honors</h2>
+        <div class="entries">
+          <article class="entry">
+            <div class="entry-meta"><span>Sep 2020 – Feb 2025</span><span class="sub">Isfahan, Iran</span></div>
+            <div>
+              <h3>University of Isfahan</h3>
+              <p class="org">B.Sc. in Computer Engineering</p>
+              <p class="desc">GPA in the last two years: 17.24 / 20 (≈ 3.7 / 4.0)</p>
+            </div>
+          </article>
+          <article class="entry">
+            <div class="entry-meta"><span>2021 – 2024</span></div>
+            <div>
+              <h3>Teaching Assistant</h3>
+              <p class="org">University of Isfahan</p>
+              <p class="desc">Fundamentals of Programming · Advanced Programming · Data Structures</p>
+            </div>
+          </article>
+          <article class="entry">
+            <div class="entry-meta"><span>Honors</span></div>
+            <div>
+              <ul class="points">
+                <li>Top 1% in the Iranian National University Entrance Exam (Mathematics and Physics).</li>
+                <li>Top Student Award, first and third semesters, University of Isfahan.</li>
+                <li>Finalist (second stage), Iranian National Astronomy and Astrophysics Olympiad.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section alt" id="projects">
+      <div class="wrap">
+        <h2 class="section-title">Selected projects</h2>
         <div class="projects">
-          <a class="card project reveal" href="https://github.com/MohammadMdv/mllm-hwsi-app" target="_blank" rel="noopener">
-            <div class="project-top"><span class="emoji" aria-hidden="true">🧬</span><span class="ext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
-            <h3>MLLM-HWSI Inference &amp; Reproducibility</h3>
-            <p>A config-driven app serving a CVPR 2026 whole-slide multimodal LLM (Qwen2.5-7B + CellViT/CONCH/HIPT encoders) on a single 24 GB GPU. Diagnostics showed the released checkpoint cannot reproduce the paper's image-conditioned results, with the evidence documented.</p>
-            <div class="stack"><span>Python</span><span>Docker</span><span>Multimodal LLM</span></div>
-          </a>
-          <a class="card project reveal" href="https://github.com/MohammadMdv/histopath-retrieval" target="_blank" rel="noopener">
-            <div class="project-top"><span class="emoji" aria-hidden="true">🔬</span><span class="ext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
-            <h3>Histopathology Patch Retrieval</h3>
-            <p>Content-based image-to-image retrieval over NCT-CRC-HE-100K using pathology foundation models (phikon-v2), with patient-disjoint evaluation splits and under 3 GB peak VRAM.</p>
-            <div class="stack"><span>Python</span><span>FAISS</span><span>FastAPI</span><span>Docker</span></div>
-          </a>
-          <a class="card project reveal" href="https://github.com/MohammadMdv/GoOD" target="_blank" rel="noopener">
-            <div class="project-top"><span class="emoji" aria-hidden="true">🐹</span><span class="ext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
-            <h3>GoOD: Go Outlier Detection</h3>
-            <p>A PyOD-inspired anomaly-detection library with 13+ algorithms (IForest, LOF, KNN, HBOS, ECOD, COPOD, PCA, LODA, ABOD, …), built to remove Python throughput bottlenecks on streaming workloads.</p>
-            <div class="stack"><span>Go</span><span>Open source</span></div>
-          </a>
-          <a class="card project reveal" href="https://github.com/MohammadMdv/rsod" target="_blank" rel="noopener">
-            <div class="project-top"><span class="emoji" aria-hidden="true">🦀</span><span class="ext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
-            <h3>RsOD: Rust Outlier Detection</h3>
-            <p>An idiomatic Rust re-implementation of GoOD with the same 13 algorithms and a PyOD-style <code class="mono">fit</code> / <code class="mono">predict</code> / <code class="mono">predict_proba</code> API.</p>
-            <div class="stack"><span>Rust</span><span>Open source</span></div>
-          </a>
-          <a class="card project reveal" href="https://github.com/MohammadMdv/GNN_deepening" target="_blank" rel="noopener">
-            <div class="project-top"><span class="emoji" aria-hidden="true">🕸️</span><span class="ext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
-            <h3>Deepening Graph Neural Networks</h3>
-            <p>A benchmark of tricks for training deep GNNs, reaching 32 layers without over-smoothing.</p>
-            <div class="stack"><span>PyTorch Geometric</span><span>GNNs</span></div>
-          </a>
-          <a class="card project reveal" href="https://github.com/MohammadMdv/Elasticsearch" target="_blank" rel="noopener">
-            <div class="project-top"><span class="emoji" aria-hidden="true">🔎</span><span class="ext"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
-            <h3>Semantic Search on Elasticsearch</h3>
-            <p>Index and document management with text and embedding-based kNN search behind a Streamlit interface.</p>
-            <div class="stack"><span>Elasticsearch</span><span>FastAPI</span><span>Streamlit</span></div>
-          </a>
+          <article class="project">
+            <h3><a href="https://github.com/MohammadMdv/mllm-hwsi-app">MLLM-HWSI: Inference and Reproducibility</a></h3>
+            <p>Serves a CVPR 2026 whole-slide multimodal LLM (Qwen2.5-7B with CellViT, CONCH and HIPT encoders) on a single 24&nbsp;GB GPU, and documents that the released checkpoint does not reproduce the paper's image-conditioned results.</p>
+            <p class="tech">Python · Docker · Multimodal LLMs</p>
+          </article>
+          <article class="project">
+            <h3><a href="https://github.com/MohammadMdv/histopath-retrieval">Histopathology Patch Retrieval</a></h3>
+            <p>Content-based image retrieval over NCT-CRC-HE-100K with pathology foundation models (Phikon-v2), patient-disjoint evaluation and under 3&nbsp;GB of peak VRAM.</p>
+            <p class="tech">Python · FAISS · FastAPI · Docker</p>
+          </article>
+          <article class="project">
+            <h3><a href="https://github.com/MohammadMdv/GoOD">GoOD: Outlier Detection in Go</a></h3>
+            <p>A PyOD-inspired anomaly detection library with 13 algorithms, including Isolation Forest, LOF, ECOD and COPOD, built for high-throughput streaming workloads.</p>
+            <p class="tech">Go · Open source</p>
+          </article>
+          <article class="project">
+            <h3><a href="https://github.com/MohammadMdv/rsod">RsOD: Outlier Detection in Rust</a></h3>
+            <p>An idiomatic Rust implementation of the same 13 algorithms with a PyOD-style <code>fit</code> / <code>predict</code> / <code>predict_proba</code> interface.</p>
+            <p class="tech">Rust · Open source</p>
+          </article>
+          <article class="project">
+            <h3><a href="https://github.com/MohammadMdv/GNN_deepening">Deepening Graph Neural Networks</a></h3>
+            <p>A benchmark of techniques for training deep GNNs, reaching 32 layers without over-smoothing.</p>
+            <p class="tech">PyTorch Geometric</p>
+          </article>
+          <article class="project">
+            <h3><a href="https://github.com/MohammadMdv/Elasticsearch">Semantic Search on Elasticsearch</a></h3>
+            <p>Index and document management with lexical and embedding-based kNN search behind a Streamlit interface.</p>
+            <p class="tech">Elasticsearch · FastAPI · Streamlit</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- Skills & education -->
-    <section id="skills">
+    <section class="section" id="skills">
       <div class="wrap">
-        <div class="section-head reveal"><span class="num mono">05.</span><h2>Skills &amp; education</h2><span class="line"></span></div>
-        <div class="skills">
-          <div class="card skill-group reveal">
-            <h3>Programming</h3>
-            <div class="chips"><span class="chip">Python</span><span class="chip">Go</span><span class="chip">C++</span><span class="chip">Rust</span><span class="chip">Java</span><span class="chip">SQL</span><span class="chip">Bash</span></div>
-          </div>
-          <div class="card skill-group reveal">
-            <h3>ML / Deep learning</h3>
-            <div class="chips"><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">Hugging Face Transformers</span><span class="chip">PyTorch Geometric</span><span class="chip">scikit-learn</span><span class="chip">OpenCV</span><span class="chip">PyOD</span></div>
-          </div>
-          <div class="card skill-group reveal">
-            <h3>Retrieval &amp; data</h3>
-            <div class="chips"><span class="chip">FAISS</span><span class="chip">Qdrant</span><span class="chip">Elasticsearch</span><span class="chip">Kibana</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">SciPy</span></div>
-          </div>
-          <div class="card skill-group reveal">
-            <h3>Infrastructure</h3>
-            <div class="chips"><span class="chip">Docker &amp; Compose</span><span class="chip">GCP (Vertex AI, Cloud Run)</span><span class="chip">RunPod (A100/H100)</span><span class="chip">FastAPI</span><span class="chip">Linux</span><span class="chip">Git</span><span class="chip">Weights &amp; Biases</span><span class="chip">LaTeX</span></div>
-          </div>
-        </div>
-
-        <div class="card edu reveal" style="margin-top:16px">
-          <div class="edu-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></div>
-          <div>
-            <div class="job-top">
-              <h3>B.Sc. in Computer Engineering</h3>
-              <span class="when mono" style="color:var(--faint);font-size:.85rem">Sep 2020 – Feb 2025</span>
-            </div>
-            <p class="sub">University of Isfahan · Isfahan, Iran · GPA (last two years) 17.24/20 (≈3.7/4.0)</p>
-            <ul>
-              <li>Top 1% in the Iranian National University Entrance Exam (Math &amp; Physics).</li>
-              <li>Top Student award, 1st and 3rd semesters.</li>
-              <li>Finalist (2nd stage), National Astronomy &amp; Astrophysics Olympiad.</li>
-              <li>Teaching Assistant (2021–2024): Fundamentals of Programming, Advanced Programming, Data Structures.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <div class="wrap">
-        <div class="card contact reveal">
-          <span class="num mono" style="color:var(--accent)">06. What's next?</span>
-          <h2>Let's <span class="grad-text">work together</span></h2>
-          <p>I'm always happy to talk about research collaborations, robust ML, computer vision or interesting engineering problems.</p>
-          <div class="cta">
-            <a class="btn primary" href="mailto:mhm.ebrh.mahdavi@gmail.com">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
-              mhm.ebrh.mahdavi@gmail.com
-            </a>
-            <a class="btn" href="https://www.linkedin.com/in/mohammad-mahdavi-90b795158/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn" href="https://scholar.google.com/citations?user=pCmXnp4AAAAJ&hl=en" target="_blank" rel="noopener">Scholar</a>
-            <a class="btn" href="https://github.com/MohammadMdv" target="_blank" rel="noopener">GitHub</a>
-          </div>
-        </div>
+        <h2 class="section-title">Skills</h2>
+        <dl class="skills">
+          <div class="skill"><dt>Programming</dt><dd>Python, Go, C++, Rust, Java, SQL, Bash</dd></div>
+          <div class="skill"><dt>Machine learning</dt><dd>PyTorch, TensorFlow, Hugging Face Transformers, PyTorch Geometric, scikit-learn, OpenCV, PyOD</dd></div>
+          <div class="skill"><dt>Retrieval &amp; data</dt><dd>FAISS, Qdrant, Elasticsearch, Kibana, pandas, NumPy, SciPy</dd></div>
+          <div class="skill"><dt>Infrastructure</dt><dd>Docker, GCP (Vertex AI, Cloud Run), RunPod, FastAPI, Linux, Git, Weights &amp; Biases, LaTeX</dd></div>
+          <div class="skill"><dt>Languages</dt><dd>Persian (native), English (IELTS 8.0), Italian (A2)</dd></div>
+        </dl>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap">© <span id="year">2026</span> Mohammad Mahdavi · Built with plain HTML &amp; CSS</div>
+  <footer class="contact" id="contact">
+    <div class="wrap">
+      <h2 class="section-title">Contact</h2>
+      <p>I am happy to talk about research collaborations in robust machine learning, computer vision and speech, and about applied ML engineering.</p>
+      <a class="email" href="mailto:mhm.ebrh.mahdavi@gmail.com">mhm.ebrh.mahdavi@gmail.com</a>
+      <div class="legal">
+        <span>© 2026 Mohammad Mahdavi</span>
+        <span>Last updated November 2026</span>
+      </div>
+    </div>
   </footer>
-
-  <script>
-    (function () {
-      var root = document.documentElement;
-
-      // Theme toggle
-      var btn = document.getElementById("theme-toggle");
-      var sun = document.getElementById("icon-sun");
-      var moon = document.getElementById("icon-moon");
-      function isDark() {
-        var t = root.getAttribute("data-theme");
-        if (t) return t === "dark";
-        return !window.matchMedia("(prefers-color-scheme: light)").matches;
-      }
-      function syncIcon() {
-        var dark = isDark();
-        sun.style.display = dark ? "block" : "none";
-        moon.style.display = dark ? "none" : "block";
-      }
-      btn.addEventListener("click", function () {
-        var next = isDark() ? "light" : "dark";
-        root.setAttribute("data-theme", next);
-        try { localStorage.setItem("theme", next); } catch (e) {}
-        syncIcon();
-      });
-      syncIcon();
-
-      // Mobile menu
-      var menuBtn = document.getElementById("menu-btn");
-      var links = document.getElementById("nav-links");
-      menuBtn.addEventListener("click", function () {
-        var open = links.classList.toggle("open");
-        menuBtn.setAttribute("aria-expanded", open ? "true" : "false");
-      });
-      links.addEventListener("click", function (e) {
-        if (e.target.tagName === "A") {
-          links.classList.remove("open");
-          menuBtn.setAttribute("aria-expanded", "false");
-        }
-      });
-
-      // Rotating research focus
-      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-      var phrases = [
-        "Adversarial robustness in speech models",
-        "Backdoor attacks & defenses",
-        "Open-set visual retrieval",
-        "Self-supervised representation learning",
-        "Multimodal LLMs for pathology"
-      ];
-      var el = document.getElementById("rotator-text");
-      if (!reduce) {
-        var i = 0, j = phrases[0].length, deleting = true;
-        setTimeout(function tick() {
-          var p = phrases[i];
-          if (deleting) {
-            j--;
-            if (j <= 0) { deleting = false; i = (i + 1) % phrases.length; }
-          } else {
-            j++;
-            if (j >= phrases[i].length) { deleting = true; el.textContent = phrases[i]; return setTimeout(tick, 2200); }
-          }
-          el.textContent = phrases[i].slice(0, Math.max(j, 0));
-          setTimeout(tick, deleting ? 28 : 55);
-        }, 2200);
-      }
-
-      // Reveal on scroll
-      var items = document.querySelectorAll(".reveal");
-      if ("IntersectionObserver" in window && !reduce) {
-        var io = new IntersectionObserver(function (entries) {
-          entries.forEach(function (en) {
-            if (en.isIntersecting) { en.target.classList.add("in"); io.unobserve(en.target); }
-          });
-        }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
-        items.forEach(function (it) { io.observe(it); });
-      } else {
-        items.forEach(function (it) { it.classList.add("in"); });
-      }
-
-      // Highlight the current section in the nav
-      var navAs = links.querySelectorAll("a");
-      var sections = Array.prototype.map.call(navAs, function (a) { return document.querySelector(a.getAttribute("href")); });
-      function onScroll() {
-        var y = window.scrollY + 120, current = -1;
-        sections.forEach(function (s, k) { if (s && s.offsetTop <= y) current = k; });
-        navAs.forEach(function (a, k) { a.classList.toggle("active", k === current); });
-      }
-      window.addEventListener("scroll", onScroll, { passive: true });
-      onScroll();
-
-      document.getElementById("year").textContent = new Date().getFullYear();
-    })();
-  </script>
 </body>
 </html>
