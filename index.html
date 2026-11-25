@@ -132,6 +132,9 @@
     .entry h3 a { color: var(--text); }
     .entry h3 a:hover { color: var(--accent); }
     .org { color: var(--accent); font-weight: 500; font-size: 0.95rem; margin-top: 3px; }
+    .with-logo { display: grid; grid-template-columns: 48px minmax(0, 1fr); column-gap: 18px; }
+    .with-logo > :not(.logo) { grid-column: 2; }
+    .logo { grid-column: 1; grid-row: 1 / span 2; width: 48px; height: 48px; margin-top: 3px; border-radius: 10px; border: 1px solid var(--line); background: #fff; object-fit: cover; }
     .entry p.desc { color: var(--muted); font-size: 0.97rem; margin-top: 8px; }
     .entry ul.points { display: grid; gap: 8px; margin-top: 12px; }
     .entry ul.points li { position: relative; padding-left: 20px; color: var(--muted); font-size: 0.97rem; }
@@ -178,6 +181,9 @@
       .entry-meta { padding-top: 0; display: flex; flex-wrap: wrap; gap: 0 10px; }
       .entry-meta .sub { margin-top: 0; }
       .entry-meta .sub::before { content: "\00b7"; margin-right: 10px; }
+      .with-logo { grid-template-columns: 42px minmax(0, 1fr); column-gap: 14px; }
+      .with-logo > ul.points { grid-column: 1 / -1; }
+      .logo { width: 42px; height: 42px; margin-top: 1px; border-radius: 9px; }
       .projects { grid-template-columns: minmax(0, 1fr); }
       .contact { padding-top: 60px; }
       .contact .email { font-size: 1.15rem; }
@@ -308,47 +314,12 @@
       <div class="wrap">
         <h2 class="section-title">Experience</h2>
 
-        <h3 class="label group-label">Research</h3>
-        <div class="entries">
-          <article class="entry">
-            <div class="entry-meta"><span>Nov 2025 – Present</span><span class="sub">Tehran, Iran</span></div>
-            <div>
-              <h3>Research Assistant</h3>
-              <p class="org">RIML Lab, Sharif University of Technology · Supervisor: Prof. M. H. Rohban</p>
-              <ul class="points">
-                <li>Designed GhostWord, a time-localized acoustic backdoor attack on ASR that reaches over 90% attack success on Whisper and Wav2Vec2.</li>
-                <li>Developed TransferBlock, which uses Latent Jacobian Regularization to stop attacks on base ASR models from transferring to fine-tuned versions.</li>
-              </ul>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="entry-meta"><span>Nov 2024 – Present</span><span class="sub">Grenoble, France (remote)</span></div>
-            <div>
-              <h3>Research Assistant</h3>
-              <p class="org">LIPhy, Université Grenoble Alpes · Advisors: Prof. A. Gourrier, Dr. P. Adibi</p>
-              <ul class="points">
-                <li>Co-developed S3RIQA, a self-supervised contrastive framework for no-reference super-resolution quality assessment.</li>
-                <li>Built the SRMORSS dataset of 15,374 super-resolved real-world images; developing a Graph-GAN super-resolution model.</li>
-              </ul>
-            </div>
-          </article>
-          <article class="entry">
-            <div class="entry-meta"><span>Jun 2023 – Aug 2023</span><span class="sub">Isfahan, Iran</span></div>
-            <div>
-              <h3>AI/ML Researcher</h3>
-              <p class="org">ILS Lab, University of Isfahan</p>
-              <ul class="points">
-                <li>Benchmarked training techniques for deep graph neural networks and co-authored a survey on GNN-based drug repurposing.</li>
-              </ul>
-            </div>
-          </article>
-        </div>
-
         <h3 class="label group-label">Industry</h3>
         <div class="entries">
           <article class="entry">
             <div class="entry-meta"><span>Jul 2026 – Present</span><span class="sub">New York, USA (remote)</span></div>
-            <div>
+            <div class="with-logo">
+              <img class="logo" src="images/logos/duoanalytics.webp" alt="" width="48" height="48" loading="lazy" decoding="async" />
               <h3>Senior AI Engineer &amp; Vision Lead</h3>
               <p class="org">DuoAnalytics</p>
               <ul class="points">
@@ -360,7 +331,8 @@
           </article>
           <article class="entry">
             <div class="entry-meta"><span>Aug 2024 – Present</span><span class="sub">Isfahan, Iran</span></div>
-            <div>
+            <div class="with-logo">
+              <img class="logo" src="images/logos/payampardaz.webp" alt="" width="48" height="48" loading="lazy" decoding="async" />
               <h3>Software Engineer (AI)</h3>
               <p class="org">PayamPardaz</p>
               <ul class="points">
@@ -371,11 +343,51 @@
           </article>
           <article class="entry">
             <div class="entry-meta"><span>Nov 2022 – May 2023</span><span class="sub">Isfahan, Iran</span></div>
-            <div>
+            <div class="with-logo">
+              <img class="logo" src="images/logos/orbyx.webp" alt="" width="48" height="48" loading="lazy" decoding="async" />
               <h3>Machine Learning Engineer, Head of AI</h3>
               <p class="org">Orbyx Tech</p>
               <ul class="points">
                 <li>Led Factory Eye, a real-time computer vision system for industrial safety compliance, reaching 95% accuracy in on-site deployment.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="label group-label">Research</h3>
+        <div class="entries">
+          <article class="entry">
+            <div class="entry-meta"><span>Nov 2025 – Present</span><span class="sub">Tehran, Iran</span></div>
+            <div class="with-logo">
+              <img class="logo" src="images/logos/riml.webp" alt="" width="48" height="48" loading="lazy" decoding="async" />
+              <h3>Research Assistant</h3>
+              <p class="org">RIML Lab, Sharif University of Technology · Supervisor: Prof. M. H. Rohban</p>
+              <ul class="points">
+                <li>Designed GhostWord, a time-localized acoustic backdoor attack on ASR that reaches over 90% attack success on Whisper and Wav2Vec2.</li>
+                <li>Developed TransferBlock, which uses Latent Jacobian Regularization to stop attacks on base ASR models from transferring to fine-tuned versions.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="entry">
+            <div class="entry-meta"><span>Nov 2024 – Present</span><span class="sub">Grenoble, France (remote)</span></div>
+            <div class="with-logo">
+              <img class="logo" src="images/logos/uga.webp" alt="" width="48" height="48" loading="lazy" decoding="async" />
+              <h3>Research Assistant</h3>
+              <p class="org">LIPhy, Université Grenoble Alpes · Advisors: Prof. A. Gourrier, Dr. P. Adibi</p>
+              <ul class="points">
+                <li>Co-developed S3RIQA, a self-supervised contrastive framework for no-reference super-resolution quality assessment.</li>
+                <li>Built the SRMORSS dataset of 15,374 super-resolved real-world images; developing a Graph-GAN super-resolution model.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="entry">
+            <div class="entry-meta"><span>Jun 2023 – Aug 2023</span><span class="sub">Isfahan, Iran</span></div>
+            <div class="with-logo">
+              <img class="logo" src="images/logos/isfahan.webp" alt="" width="48" height="48" loading="lazy" decoding="async" />
+              <h3>AI/ML Researcher</h3>
+              <p class="org">ILS Lab, University of Isfahan</p>
+              <ul class="points">
+                <li>Benchmarked training techniques for deep graph neural networks and co-authored a survey on GNN-based drug repurposing.</li>
               </ul>
             </div>
           </article>
@@ -389,15 +401,17 @@
         <div class="entries">
           <article class="entry">
             <div class="entry-meta"><span>Sep 2020 – Feb 2025</span><span class="sub">Isfahan, Iran</span></div>
-            <div>
+            <div class="with-logo">
+              <img class="logo" src="images/logos/isfahan.webp" alt="" width="48" height="48" loading="lazy" decoding="async" />
               <h3>University of Isfahan</h3>
               <p class="org">B.Sc. in Computer Engineering</p>
-              <p class="desc">GPA in the last two years: 17.24 / 20 (≈ 3.7 / 4.0)</p>
+              <p class="desc">GPA in the last two years: 17.24&nbsp;/&nbsp;20 (≈&nbsp;3.7&nbsp;/&nbsp;4.0)</p>
             </div>
           </article>
           <article class="entry">
             <div class="entry-meta"><span>2021 – 2024</span></div>
-            <div>
+            <div class="with-logo">
+              <img class="logo" src="images/logos/isfahan.webp" alt="" width="48" height="48" loading="lazy" decoding="async" />
               <h3>Teaching Assistant</h3>
               <p class="org">University of Isfahan</p>
               <p class="desc">Fundamentals of Programming · Advanced Programming · Data Structures</p>
@@ -405,7 +419,7 @@
           </article>
           <article class="entry">
             <div class="entry-meta"><span>Honors</span></div>
-            <div>
+            <div class="with-logo">
               <ul class="points">
                 <li>Top 1% in the Iranian National University Entrance Exam (Mathematics and Physics).</li>
                 <li>Top Student Award, first and third semesters, University of Isfahan.</li>
